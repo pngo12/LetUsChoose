@@ -8,7 +8,7 @@ const Navbar = () => {
         <div class="container">
             <nav className="navbar is-primary">
                 <div className="navbar-brand">
-                    <a className="navbar-item" href="https://bulma.io">LUC</a>
+                    <a className="navbar-item" href="https://google.com">LUC</a>
                 </div>
                 <div className="navbar-menu is-active">
                     <div className="navbar-end">

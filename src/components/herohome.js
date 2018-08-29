@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import shrug from '../shrug.png';
-import About from './about'
 
 
 const HeroHome = () => {
@@ -10,8 +9,7 @@ const HeroHome = () => {
     <nav className="navbar">
       <div className="container">
         <div className="navbar-brand">
-          <a className="navbar-item">
-            <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo"/> </a>
+          <a className="navbar-item title">LUC </a>
           <span className="navbar-burger burger" data-target="navbarMenuHeroA">
             <span></span>
             <span></span>
@@ -21,7 +19,7 @@ const HeroHome = () => {
         <div id="navbarMenuHeroA" className="navbar-menu">
           <div className="navbar-end">
             <a className="navbar-item">Home</a>
-            <a className="navbar-item" href={About}>About</a>
+            <a className="navbar-item">About</a>
             <a className="navbar-item">Give us Feedback</a>
             <a className="navbar-item">FAQ</a>
           </div>

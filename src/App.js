@@ -3,7 +3,8 @@ import './App.css';
 import HeroHome from './components/herohome'
 import Footer from './components/footer'
 import HomeBody from './components/homebody'
-import Input from './components/inputs'
+import InputForm from './components/inputs'
+import Data from './components/data'
 
 class App extends Component {
   render() {
@@ -11,7 +12,7 @@ class App extends Component {
         <div>
         <HeroHome />
         <HomeBody />
-        <Input />
+        <InputForm />
         <Footer /> 
         </div >
     );
