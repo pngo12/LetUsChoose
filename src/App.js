@@ -74,11 +74,11 @@ class App extends Component {
               />
               <Footer />
               </div>
-          )
+          );
     }
   }
 
-
+  
   render() {
     return (
       <div>
