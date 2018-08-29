@@ -4,7 +4,7 @@ import Navbar from './navbar'
 const About = () => {
     return ( 
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             <div class="container">
                 <div class="row">
                     <div class="col-sm">
