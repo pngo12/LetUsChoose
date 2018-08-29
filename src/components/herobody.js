@@ -3,7 +3,8 @@ import shrug from '../shrug.png';
 
 const HeroBody = () => {
     return (
-        <div className="hero-body is-primary">
+    <section className="hero is-primary is-large">
+        <div className="hero-body ">
             <div className="container">
                 <div className="columns">
                     <div className="column is-half">
@@ -24,6 +25,7 @@ const HeroBody = () => {
                 </div>
             </div>
         </div>
+</section>
     );
 }
 

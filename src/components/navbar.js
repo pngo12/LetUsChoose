@@ -1,28 +1,43 @@
-// import React, { Component } from 'react';
+import React, { Component } from 'react';
 
+const HOME_PAGE = 'HOME_PAGE'
+const ABOUT_PAGE = 'ABOUT_PAGE'
+const FEEDBACK_PAGE = 'FEEDBACK_PAGE'
 
-// const Navbar = () => {
-//     return ( 
-// <section class="hero is-primary is-small">
-//     <div class="hero-body">
-//         <div class="container">
-//             <nav className="navbar is-primary">
-//                 <div className="navbar-brand">
-//                     <a className="navbar-item" href="https://bulma.io">LUC</a>
-//                 </div>
-//                 <div className="navbar-menu is-active">
-//                     <div className="navbar-end">
-//                         <a className="navbar-item">Home</a>
-//                         <a className="navbar-item">About</a>
-//                         <a className="navbar-item">Give us Feedback</a>
-//                         <a className="navbar-item">FAQ</a>
-//                     </div>
-//                 </div>
-//             </nav>
-//         </div>
-//     </div>
-// </section>
-//      );
-// }
- 
-// export default Navbar;
+const Navbar = props => {
+  return (
+    <section className="hero is-primary is-large">
+      <div className="hero-head">
+        <nav className="navbar">
+          <div className="container">
+            <div className="navbar-brand">
+              <a className="navbar-item">
+                <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo" /> </a>
+              <span className="navbar-burger burger" data-target="navbarMenuHeroA">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroA" className="navbar-menu">
+              <div className="navbar-end">
+                <a className="navbar-item" onClick={() => {
+                  props.changePage(HOME_PAGE)
+                }} >Home</a>
+                <a className="navbar-item" onClick={() => {
+                  props.changePage(ABOUT_PAGE)
+                }} >About</a>
+                <a className="navbar-item" onClick={() => {
+                  props.changePage(FEEDBACK_PAGE)
+                }} >Give Us Feedback</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+  );
+}
+
+export default Navbar;

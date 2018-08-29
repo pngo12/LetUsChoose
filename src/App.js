@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import HeroHome from './components/herohome'
+import Navbar from './components/navbar'
 import Footer from './components/footer'
 import HomeBody from './components/homebody'
 import Input from './components/inputs'
@@ -31,7 +31,7 @@ class App extends Component {
       case HOME_PAGE:
         return (
           <div>
-            <HeroHome 
+            <Navbar 
             changePage={this.changePage}
             />
             <HeroBody />
@@ -42,7 +42,7 @@ class App extends Component {
         case ABOUT_PAGE:
           return (
             <div>
-              <HeroHome 
+              <Navbar 
               changePage={this.changePage}
               />
               <About 
@@ -54,7 +54,7 @@ class App extends Component {
           case FEEDBACK_PAGE:
           return (
             <div>
-              <HeroHome 
+              <Navbar 
               changePage={this.changePage}
               />
               <Feedback 
@@ -66,7 +66,7 @@ class App extends Component {
           case FAQ_PAGE:
           return (
             <div>
-              <HeroHome 
+              <Navbar 
               changePage={this.changePage}
               />
               <Faq 

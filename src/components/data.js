@@ -6,7 +6,7 @@ import React from 'react';
 // budget value = $
 // distance value = > 20
 
-// let filteredData = data.filter(x => x.ethnicity === 'Italian' && x.genre === )
+// let filteredData = data.filter(x => x.ethnicity === {target.value} || x.genre === )
 // and then call random on the new array
 
 // const newData = []
@@ -18,10 +18,10 @@ import React from 'react';
 //         name: 'North Italia',
 //         Ethnicity: 'Italian',
 //         Genre: 'Pizza',
-//         Budget: '$$',
-//         Alcohol: true,
-//         Distance: '3.3 miles',
-//         Attire: 'Casual'
+//         // Budget: '$$',
+//         // Alcohol: true,
+//         // Distance: '3.3 miles',
+//         // Attire: 'Casual'
 //     }
 // ]
 
@@ -33,75 +33,69 @@ const Data = [
         name: 'North Italia',
         ethnicity: 'Italian',
         genre: 'Pizza',
-        budget: '$$',
-        alcohol: true,
-        distance: '3.3 miles',
-        attire: 'Casual',
-        dineIn: true,
-        takeOut: true,
-        alcohol: true
+        // budget: '$$',
+        // alcohol: 'true',
+        // distance: '<5 miles',
+        // attire: 'Casual',
+        // dineIn: 'dine-in',
+        // takeOut: 'take-out',
 
     },
     {
         name: 'HiroNori Craft Ramen',
         ethnicity: 'Japanese',
         genre: 'Ramen',
-        budget: '$$',
-        alcohol: true,
-        distance: '2.6 miles',
-        attire: 'Casual',
-        dineIn: true,
-        takeOut: false,
-        alcohol: true
+        // budget: '$$',
+        // alcohol: 'true',
+        // distance: '<5 miles',
+        // attire: 'Casual',
+        // dineIn: 'dine-in',
+        // takeOut: 'take-out',
     },
     {
         name: 'Agora Churrascaria',
         ethnicity: 'Brazilian',
-        genre: 'Steak, Barbecue',
-        budget: '$$$',
-        alcohol: true,
-        distance: '2.1 miles',
-        attire: 'Casual',
-        dineIn: true,
-        takeOut: false,
-        alcohol: true
+        genre: 'Barbecue',
+        // budget: '$$$',
+        // alcohol: 'true',
+        // distance: '<5 miles',
+        // attire: 'Casual',
+        // dineIn: 'dine-in',
+        // takeOut: 'take-out',
     },
     {
         name: 'H2O Poke & Grill',
-        ethnicity: 'Hawaiian, Japanese',
+        ethnicity: 'Hawaiian',
         genre: 'Poke',
-        budget: '$',
-        alcohol: false,
-        distance: '5.1 miles',
-        attire: 'Casual',
-        dineIn: true,
-        takeOut: true,
-        alcohol: false,
+        // budget: '$',
+        // alcohol: 'false',
+        // distance: '5-10 miles',
+        // attire: 'Casual',
+        // dineIn: 'dine-in',
+        // takeOut: 'take-out',
     },
     {
         name: 'Din Tai Fung',
         ethnicity: 'Taiwanese',
         genre: 'Dim Sum',
-        budget: '$$',
-        alcohol: true,
-        distance: '3.5 miles',
-        attire: 'Casual',
-        dineIn: true,
-        takeOut: true,
-        alcohol: true,
+        // budget: '$$',
+        // alcohol: 'true',
+        // distance: '<5 miles',
+        // attire: 'Casual',
+        // dineIn: 'dine-in',
+        // takeOut: 'take-out'
         
     },
     {
         name: 'Pho Tasty',
         ethnicity: 'Vietnamese',
-        genre: 'Soup, Noodles',
-        budget: '$',
-        alcohol: false,
-        distance: '23.4 miles',
-        attire: 'Casual',
-        dineIn: true,
-        takeOut: true,
-        alcohol: false
+        genre: 'Soup/Noodles',
+        // budget: '$',
+        // alcohol: 'false',
+        // distance: '>10 miles',
+        // attire: 'Casual',
+        // dineIn: 'dine-in',
+        // takeOut: 'take-out',
     }
 ]
 
