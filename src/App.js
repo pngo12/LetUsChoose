@@ -3,18 +3,87 @@ import './App.css';
 import HeroHome from './components/herohome'
 import Footer from './components/footer'
 import HomeBody from './components/homebody'
-import InputForm from './components/inputs'
-import Data from './components/data'
+import Input from './components/inputs'
+import Feedback from './components/feedback'
+import About from './components/about'
+import Faq from './components/faq'
+import HeroBody from './components/herobody'
+
+const HOME_PAGE = 'HOME_PAGE'
+const ABOUT_PAGE = 'ABOUT_PAGE'
+const FEEDBACK_PAGE = 'FEEDBACK_PAGE'
+const FAQ_PAGE = 'FAQ_PAGE'
 
 class App extends Component {
+
+  state = {
+    page: HOME_PAGE
+  }
+
+  changePage = name => {
+    this.setState({
+      page: name
+    });
+  };
+
+  selectPage = pageName => {
+    switch (pageName) {
+      case HOME_PAGE:
+        return (
+          <div>
+            <HeroHome 
+            changePage={this.changePage}
+            />
+            <HeroBody />
+            <HomeBody />
+            <Footer />
+          </div>
+        );
+        case ABOUT_PAGE:
+          return (
+            <div>
+              <HeroHome 
+              changePage={this.changePage}
+              />
+              <About 
+              changePage={this.changePage}
+              />
+              <Footer />
+              </div>
+          );
+          case FEEDBACK_PAGE:
+          return (
+            <div>
+              <HeroHome 
+              changePage={this.changePage}
+              />
+              <Feedback 
+              changePage={this.changePage}
+              />
+              <Footer />
+              </div>
+          );
+          case FAQ_PAGE:
+          return (
+            <div>
+              <HeroHome 
+              changePage={this.changePage}
+              />
+              <Faq 
+              changePage={this.changePage}
+              />
+              <Footer />
+              </div>
+          )
+    }
+  }
+
+
   render() {
     return (
-        <div>
-        <HeroHome />
-        <HomeBody />
-        <InputForm />
-        <Footer /> 
-        </div >
+      <div>
+        {this.selectPage(this.state.page)}
+      </div >
     );
   }
 }
