@@ -6,7 +6,6 @@ import HomeBody from './components/homebody'
 import Input from './components/inputs'
 import Feedback from './components/feedback'
 import About from './components/about'
-import Faq from './components/faq'
 import HeroBody from './components/herobody'
 
 const HOME_PAGE = 'HOME_PAGE'
@@ -63,18 +62,6 @@ class App extends Component {
               <Footer />
               </div>
           );
-          case FAQ_PAGE:
-          return (
-            <div>
-              <Navbar 
-              changePage={this.changePage}
-              />
-              <Faq 
-              changePage={this.changePage}
-              />
-              <Footer />
-              </div>
-          )
     }
   }
 

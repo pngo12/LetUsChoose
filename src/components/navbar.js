@@ -6,9 +6,7 @@ const FEEDBACK_PAGE = 'FEEDBACK_PAGE'
 
 const Navbar = props => {
   return (
-    <section className="hero is-primary is-large">
-      <div className="hero-head">
-        <nav className="navbar">
+        <nav className="navbar is-primary">
           <div className="container">
             <div className="navbar-brand">
               <a className="navbar-item">
@@ -34,8 +32,6 @@ const Navbar = props => {
             </div>
           </div>
         </nav>
-      </div>
-    </section>
 
   );
 }
