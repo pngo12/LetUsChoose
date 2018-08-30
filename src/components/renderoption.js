@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 
-// renderSelection = () => {
-
-// }
-
 const RenderOption = props => {
     return ( 
         <div className="card is-pulled-left has-text-centered">

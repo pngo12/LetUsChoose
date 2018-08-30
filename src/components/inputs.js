@@ -75,7 +75,10 @@ class InputForm extends Component {
                 {/* The below will render the random restaurant */}
                 <div className="column is-1"></div>
             <div className="column is-6">
-                {/* Render Random Option Here */}
+                
+                {
+                    !this.state.isHidden && <RenderOption randomChoice={this.state.randomChoice} />
+                }
                 </div>
             </div>
     </section>
