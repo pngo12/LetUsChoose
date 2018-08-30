@@ -9,7 +9,9 @@ const Navbar = props => {
         <nav className="navbar is-primary">
           <div className="container">
             <div className="navbar-brand">
-              <a className="navbar-item">
+              <a className="navbar-item" onClick={() => {
+                  props.changePage(HOME_PAGE)
+              }}>
                 <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo" /> </a>
               <span className="navbar-burger burger" data-target="navbarMenuHeroA">
                 <span></span>
