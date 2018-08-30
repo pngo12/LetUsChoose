@@ -16,8 +16,16 @@ const INPUT_PAGE = "INPUT_PAGE"
 class App extends Component {
 
   state = {
-    page: HOME_PAGE
+    page: HOME_PAGE,
+    feedBack: []
   }
+
+  addtoFeedback = feedback => {
+    let newFeedback = [...this.state.feedBack, feedback];
+    this.setState({
+        feedback: newFeedback
+    });
+}
 
   changePage = name => {
     this.setState({
@@ -62,6 +70,7 @@ class App extends Component {
               changePage={this.changePage}
               />
               <Feedback 
+              addtoFeedback = {this.addtoFeedback}
               changePage={this.changePage}
               />
               <Footer />
