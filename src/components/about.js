@@ -1,5 +1,8 @@
 import React from 'react';
 import Navbar from './navbar'
+import phillip from '../phillip.png'
+import kevin from '../kevin.jpg'
+import john from '../john.jpg'
 
 const About = () => {
     return ( 
@@ -33,9 +36,9 @@ const About = () => {
                     <div className="column circle"> <div className="circle"></div></div>
                 </div> <br />
                 <div className="columns">
-                    <div className="column">Phillip Ngo</div>
-                    <div className="column">Kevin Moon</div>
-                    <div className="column">John Park</div>
+                    <div className="column"><figure> <img className="aboutMe" src={phillip}/></figure>Phillip Ngo</div>
+                    <div className="column"><figure> <img className="aboutMe" src={kevin}/></figure>Kevin Moon</div>
+                    <div className="column"><figure> <img className="aboutMe" src={john}/></figure>John Park</div>
                 </div>
             </div>
             </section>

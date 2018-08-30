@@ -45,29 +45,20 @@ class Feedback extends Component {
     render() {
     return ( 
         <section className="section is-medium">
+        <h1 className ="title-page"> We value your input! </h1>
+        <h2 className = "title-page2"> Please let us know what we can do better! </h2>
         <div class="columns">
         <div className ="column is-4 is-offset-4 feedback-container">
+        <form onSubmit={this.formSubmit}>
         <div class = "field">
             <label class = "label"> Name</label>
-            <div class="control has-icons-left has-icons-right">
+            <div class="control">
             <input class="input" type = 'text' placeholder = "First and Last Name" value = {this.state.name} onChange = {this.onNameChange}/>
-            <span class = "icon is-small is-left">
-                <i class="fas fa-user"></i>
-            </span>
-            <span class ="icon is-small is-right">
-                <i class = "fas fa-check"></i>
-            </span>
             </div>
 
             <label class = "label"> Email </label>
-            <div class="control has-icons-left has icons-right">
+            <div class="control">
                 <input class="input" type = "email" placeholder="Please enter your email address" value = {this.state.email} onChange = {this.onEmailChange}/>
-                <span class = "icon is-small is-left">
-                    <i class="fas fa envelope"> </i>
-                </span>
-                <span class="icon is-small is-right">
-                    <i class="fas fa-exclamation-triangle"></i>
-                </span>
             </div>
 
             <label class='label'>Subject</label>
@@ -90,13 +81,14 @@ class Feedback extends Component {
 
             <div class = "field is-grouped">
                 <div class="control">
-                    <button class="button is-primary" onClick = {this.formSubmit}> Submit</button>
+                    <button class="button is-link" onClick = {this.formSubmit}> Submit</button>
                 </div>
                 <div class="control">
                     <button class="button is-danger"> Cancel </button>
                 </div>
             </div>
             </div>
+            </form>
         </div>
         </div>
     </section>

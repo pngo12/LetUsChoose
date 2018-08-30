@@ -1,0 +1,20 @@
+.title-page {
+    font-size: 75px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 400;
+}
+.title-page2 {
+    font-size: 23px;
+    text-align: center;
+    margin-bottom: 35px;
+    font-weight: 400;
+}
+.is-medium {
+    margin-top: -165px;
+}
+.aboutMe {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
