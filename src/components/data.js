@@ -1,4 +1,11 @@
 import React from 'react';
+import NorthItalia from '../NorthItalia.png'
+import AgoraChurrascaria from '../AgoraChurrascaria.png';
+import DinTaiFung from '../DinTaiFung.png';
+import H20PokeandGrill from '../H20PokeandGrill.png';
+import HiroNori from '../HiroNori.png';
+import PhoTasty from '../PhoTasty.png';
+
 
 const Data = [
     {
@@ -7,11 +14,10 @@ const Data = [
         genre: 'Pizza',
         budget: '$$',
         alcohol: 'true',
-        distance: '<5 miles',
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'take-out',
-
+        photo: <img src={NorthItalia}/>
     },
     {
         name: 'HiroNori Craft Ramen',
@@ -19,10 +25,10 @@ const Data = [
         genre: 'Ramen',
         budget: '$$',
         alcohol: 'true',
-        distance: '<5 miles',
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'take-out',
+        photo: <img src={HiroNori}/>
     },
     {
         name: 'Agora Churrascaria',
@@ -30,10 +36,10 @@ const Data = [
         genre: 'Barbecue',
         budget: '$$$',
         alcohol: 'true',
-        distance: '<5 miles',
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'take-out',
+        photo: <img src={AgoraChurrascaria}/>
     },
     {
         name: 'H2O Poke & Grill',
@@ -41,10 +47,10 @@ const Data = [
         genre: 'Poke',
         budget: '$',
         alcohol: 'false',
-        distance: '5-10 miles',
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'take-out',
+        photo: <img src={H20PokeandGrill}/>
     },
     {
         name: 'Din Tai Fung',
@@ -52,10 +58,10 @@ const Data = [
         genre: 'Dim Sum',
         budget: '$$',
         alcohol: 'true',
-        distance: '<5 miles',
         attire: 'Casual',
         dineIn: 'dine-in',
-        takeOut: 'take-out'
+        takeOut: 'take-out',
+        photo: <img src={DinTaiFung}/>
         
     },
     {
@@ -64,11 +70,11 @@ const Data = [
         genre: 'Soup/Noodles',
         budget: '$',
         alcohol: 'false',
-        distance: '>10 miles',
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'take-out',
+        photo: <img src={PhoTasty}/>
     }
 ]
 
-export default Data
+export default Data;

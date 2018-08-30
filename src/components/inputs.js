@@ -68,7 +68,7 @@ class InputForm extends Component {
                     </div>
                 </form>
                 </div>
-
+                {/* The below will render the random restaurant */}
                 <div className="column is-1"></div>
             <div className="column is-7">
                 {/* The below will render the random restaurant */}
