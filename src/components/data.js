@@ -1,29 +1,5 @@
 import React from 'react';
 
-// data[selected-index].ethnicity === 'Italian'
-// ethnicity value = Mexican
-// genre value = pizza
-// budget value = $
-// distance value = > 20
-
-// let filteredData = data.filter(x => x.ethnicity === {target.value} || x.genre === )
-// and then call random on the new array
-
-// const newData = []
-
-// data.filter (x => x.ethnicity === "italian")
-
-// const newData = [
-//     {
-//         name: 'North Italia',
-//         Ethnicity: 'Italian',
-//         Genre: 'Pizza',
-//     }
-// ]
-
-// Math.random(math.floor(newData) * newData.length)
-
-
 const Data = [
     {
         name: 'North Italia',
