@@ -6,7 +6,8 @@ class InputForm extends Component {
         chosenEthn: '',
         chosenGn: '',
         ethnicity: ["Italian", 'Japanese', 'Brazilian', 'Hawaiian', 'Taiwanese', 'Vietnamese', 'No Preference'],
-        genre: ['Pizza', 'Ramen', 'Barbecue', 'Poke', 'Dim Sum', 'Soup/Noodles', 'No Preference']
+        genre: ['Pizza', 'Ramen', 'Barbecue', 'Poke', 'Dim Sum', 'Soup/Noodles', 'No Preference'],
+        randomChoice: ''
     }
 
     formSubmit = e => {
@@ -16,23 +17,21 @@ class InputForm extends Component {
     randomize = () => {
         const chosenEthnicity = Data.find(x => x.ethnicity === this.state.chosenEthn)
         const chosenGenre = Data.find(x => x.genre === this.state.chosenGn)
-        
-        console.log(chosenEthnicity, chosenGenre)
-
         const randomOptions = [chosenEthnicity, chosenGenre]
         const randomizeOptions = Math.floor(Math.random() * randomOptions.length)
-
+        
+        console.log(chosenEthnicity, chosenGenre)
         console.log(randomizeOptions)
-
-    //     if (randomizeOptions === 0) {
-    //         console.log(randomOptions[0])
-    //     } else console.log(randomOptions[1])
-    // }
-
-            if (randomizeOptions === randomOptions[randomizeOptions]) {
-            console.log(randomOptions[randomizeOptions])
-        } else console.log('That didn\'t work.')
+        console.log(randomOptions[randomizeOptions])
+        this.setState({
+            randomChoice: randomOptions[randomizeOptions]
+        })
     }
+
+    renderSelection = () => {
+        
+    }
+    
 
 
 
@@ -70,9 +69,9 @@ class InputForm extends Component {
                 </form>
                 </div>
 
-                {/* The below will render the random restaurant */}
                 <div className="column is-1"></div>
             <div className="column is-7">
+                {/* The below will render the random restaurant */}
                 <div className="card is-pulled-left">
                     <div className="card-image">
                         <figure className="image is-4by3">
