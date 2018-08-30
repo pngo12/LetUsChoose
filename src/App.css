@@ -11,10 +11,14 @@
     font-weight: 400;
 }
 #is-medium {
-    margin-top: -165px;
+    margin-top: -145px;
 }
 .aboutMe {
     height: 150px;
     width: 150px;
     border-radius: 50%;
+}
+
+#biggest-container {
+    margin-top: -160px;
 }

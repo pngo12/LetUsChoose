@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import shrug from '../shrug.png';
+import manshrugging from '../manshrugging.png';
 
 const INPUT_PAGE = 'INPUT_PAGE'
 
@@ -19,12 +20,12 @@ const HeroBody = props => {
                         >Get Started</a></div>
                     <div className="column">
                         <figure className="">
-                            <img className='is-horizontal-center' src={shrug} alt="a woman shrugging her hands" />
+                            <img className='is-horizontal-center' src={manshrugging} alt="a man shrugging her hands" />
                         </figure>
                     </div>
                     <div className="column">
                         <figure className="">
-                            <img className='is-pulled-left' src={shrug} alt="a woman shrugging her hands" />
+                            <img className='is-pulled-left'  src={shrug} alt="a woman shrugging her hands" />
                         </figure>
                     </div>
                 </div>
