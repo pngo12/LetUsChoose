@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Data from './data'
+import RenderOption from './renderoption.js'
 
 class InputForm extends Component {  
     state = {
@@ -7,11 +8,18 @@ class InputForm extends Component {
         chosenGn: '',
         ethnicity: ['',"Italian", 'Japanese', 'Brazilian', 'Hawaiian', 'Taiwanese', 'Vietnamese', 'No Preference'],
         genre: ['','Pizza', 'Ramen', 'Barbecue', 'Poke', 'Dim Sum', 'Soup/Noodles', 'No Preference'],
-        randomChoice: ''
+        randomChoice: '',
+        isHidden: true
     }
 
     formSubmit = e => {
         e.preventDefault();
+    }
+    
+    toggleHidden = () => {
+        this.setState({
+            isHidden: false
+        })
     }
 
     randomize = () => {
@@ -27,15 +35,11 @@ class InputForm extends Component {
             randomChoice: randomOptions[randomizeOptions]
         })
     }
-
-    renderSelection = () => {
-        
+    dualOnClick = () => {
+        this.randomize()
+        this.toggleHidden()
     }
-    
-
-
-
-    
+        
     render() {
         return ( 
             <section className="section is-large">
@@ -64,7 +68,7 @@ class InputForm extends Component {
                 </div>
             </div>
                     <div className="control">
-                        <button className="button is-link is-medium" onClick={this.randomize}>Randomize!</button>
+                        <button className="button is-link is-medium" onClick={this.dualOnClick}>Randomize!</button>
                     </div>
                 </form>
                 </div>
@@ -72,6 +76,10 @@ class InputForm extends Component {
                 <div className="column is-1"></div>
             <div className="column is-7">
                 {/* Render Random Option Here */}
+                {
+                !this.state.isHidden && <RenderOption randomChoice={this.state.randomChoice} />
+                }
+                
             </div>
         </div>
     </section>
