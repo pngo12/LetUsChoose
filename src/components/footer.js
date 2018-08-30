@@ -4,8 +4,8 @@ const FEEDBACK_PAGE = 'FEEDBACK_PAGE'
 
 const Footer = props => {
     return (
-        <footer class="footer is-info">
-            <div class="content has-text-centered">
+        <footer className="footer is-info">
+            <div className="content has-text-centered">
                 <div className="row">
                     <p>
                     © <strong>LUC</strong> is built by Kevin Moon, John Park, and Phillip Ngo. This is an open source project.
