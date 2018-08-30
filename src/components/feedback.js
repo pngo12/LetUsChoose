@@ -81,7 +81,7 @@ class Feedback extends Component {
 
             <div class = "field is-grouped">
                 <div class="control">
-                    <button class="button is-link" onClick = {this.formSubmit}> Submit</button>
+                    <button type="submit" class="button is-primary" required = "required" onClick = {this.formSubmit}> Submit</button>
                 </div>
                 <div class="control">
                     <button class="button is-danger"> Cancel </button>
