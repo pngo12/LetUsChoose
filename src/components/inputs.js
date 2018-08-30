@@ -38,9 +38,9 @@ class InputForm extends Component {
     
     render() {
         return ( 
-            <section className="section is-large">
+            <section className="section is-large" id="biggest-container">
             <div className="columns">
-                    <div className="column is-5">
+                    <div className="column is-4">
             {/* Begin Form below */}
             <form className="is-pulled-right" onSubmit={this.formSubmit}>
                 <div className="field">
@@ -70,10 +70,10 @@ class InputForm extends Component {
                 </div>
                 {/* The below will render the random restaurant */}
                 <div className="column is-1"></div>
-            <div className="column is-7">
+            <div className="column is-6">
                 {/* Render Random Option Here */}
+                </div>
             </div>
-        </div>
     </section>
 
          );

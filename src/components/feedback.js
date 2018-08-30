@@ -3,15 +3,17 @@ const HOME_PAGE = 'HOME_PAGE'
 const ABOUT_PAGE = 'ABOUT_PAGE'
 const FEEDBACK_PAGE = 'FEEDBACK_PAGE'
 
-
 class Feedback extends Component {
     state = {
         name: "",
         email: "",
         subject: "",
         message: "",
-      }
+    }
     
+    thankYouAlert = () => {
+     alert("Thank you for your feedback! We will address this shortly!");
+    }    
       onNameChange = e => {
           this.setState({
               name: e.target.value
@@ -37,7 +39,7 @@ class Feedback extends Component {
       formSubmit = e => {
           e.preventDefault();
           this.props.addtoFeedback(this.state);
-    
+          this.thankYouAlert();
           this.setState({
               name: "",
               email: "",
@@ -85,7 +87,8 @@ class Feedback extends Component {
 
             <div className = "field is-grouped">
                 <div className="control">
-                    <button type="submit" className="button is-primary"> Submit</button>
+                    <button type="submit" className="button is-primary" > Submit</button>
+                    
                 </div>
                 <div className="control">
                     <button className="button is-danger"onClick={() => {this.props.changePage(HOME_PAGE)}}> Cancel </button>
