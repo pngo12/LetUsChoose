@@ -47,8 +47,9 @@ class App extends Component {
             <HomeBody 
             changePage={this.changePage}
             />
-            
-            <Footer />
+            <Footer 
+            changePage={this.changePage}
+            />
           </div>
         );
         case ABOUT_PAGE:
@@ -60,7 +61,9 @@ class App extends Component {
               <About 
               changePage={this.changePage}
               />
-              <Footer />
+              <Footer 
+              changePage={this.changePage}
+              />
               </div>
           );
           case FEEDBACK_PAGE:
@@ -73,7 +76,9 @@ class App extends Component {
               addtoFeedback = {this.addtoFeedback}
               changePage={this.changePage}
               />
-              <Footer />
+              <Footer 
+              changePage={this.changePage}
+              />
               </div>
           );
           case INPUT_PAGE:
@@ -85,7 +90,9 @@ class App extends Component {
               <InputForm
               changePage={this.changePage}
               />
-              <Footer />
+              <Footer 
+              changePage={this.changePage}
+              />
               </div>
           );
     }
