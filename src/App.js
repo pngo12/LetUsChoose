@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
-import HeroHome from './components/herohome'
+import Navbar from './components/navbar'
 import Footer from './components/footer'
 import HomeBody from './components/homebody'
-import Input from './components/inputs'
+import InputForm from './components/inputs'
 import Feedback from './components/feedback'
 import About from './components/about'
-import Faq from './components/faq'
 import HeroBody from './components/herobody'
 
 const HOME_PAGE = 'HOME_PAGE'
 const ABOUT_PAGE = 'ABOUT_PAGE'
 const FEEDBACK_PAGE = 'FEEDBACK_PAGE'
-const FAQ_PAGE = 'FAQ_PAGE'
+const INPUT_PAGE = "INPUT_PAGE"
 
 class App extends Component {
 
@@ -31,18 +30,23 @@ class App extends Component {
       case HOME_PAGE:
         return (
           <div>
-            <HeroHome 
+            <Navbar 
             changePage={this.changePage}
             />
-            <HeroBody />
-            <HomeBody />
+            <HeroBody 
+            changePage={this.changePage}
+            />
+            <HomeBody 
+            changePage={this.changePage}
+            />
+            
             <Footer />
           </div>
         );
         case ABOUT_PAGE:
           return (
             <div>
-              <HeroHome 
+              <Navbar 
               changePage={this.changePage}
               />
               <About 
@@ -54,7 +58,7 @@ class App extends Component {
           case FEEDBACK_PAGE:
           return (
             <div>
-              <HeroHome 
+              <Navbar 
               changePage={this.changePage}
               />
               <Feedback 
@@ -63,13 +67,13 @@ class App extends Component {
               <Footer />
               </div>
           );
-          case FAQ_PAGE:
+          case INPUT_PAGE:
           return (
             <div>
-              <HeroHome 
+              <Navbar 
               changePage={this.changePage}
               />
-              <Faq 
+              <InputForm
               changePage={this.changePage}
               />
               <Footer />
@@ -78,7 +82,7 @@ class App extends Component {
     }
   }
 
-  
+
   render() {
     return (
       <div>

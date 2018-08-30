@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 
-
-
 const Feedback = props => {
     return ( 
+        <section className="section is-medium">
         <div class="columns">
         <div className ="column is-4 is-offset-4 feedback-container">
         <div class = "field">
@@ -58,6 +57,7 @@ const Feedback = props => {
             </div>
         </div>
         </div>
+    </section>
 
     )
 }
