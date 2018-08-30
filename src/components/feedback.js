@@ -1,6 +1,48 @@
 import React, {Component} from 'react';
 
-const Feedback = props => {
+class Feedback extends Component {
+    state = {
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      }
+    
+      onNameChange = e => {
+          this.setState({
+              name: e.target.value
+          });
+      }
+      onEmailChange = e => {
+          this.setState({
+               email: e.target.value
+          });
+      }
+      onSubjectChange = e => {
+        this.setState({
+             subject: e.target.value
+        });
+    }
+    onMessageChange = e => {
+        this.setState({
+             message: e.target.value
+        });
+    }
+    
+    
+      formSubmit = e => {
+          e.preventDefault();
+          this.props.addtoFeedback(this.state);
+    
+          this.setState({
+              name: "",
+              email: "",
+              subject: "",
+              message: ""
+          })
+      }
+    
+    render() {
     return ( 
         <section className="section is-medium">
         <div class="columns">
@@ -8,7 +50,7 @@ const Feedback = props => {
         <div class = "field">
             <label class = "label"> Name</label>
             <div class="control has-icons-left has-icons-right">
-            <input class="input" type = 'text' placeholder = "First and Last Name"/>
+            <input class="input" type = 'text' placeholder = "First and Last Name" value = {this.state.name} onChange = {this.onNameChange}/>
             <span class = "icon is-small is-left">
                 <i class="fas fa-user"></i>
             </span>
@@ -19,7 +61,7 @@ const Feedback = props => {
 
             <label class = "label"> Email </label>
             <div class="control has-icons-left has icons-right">
-                <input class="input" type = "email" placeholder="Please enter your email address"/>
+                <input class="input" type = "email" placeholder="Please enter your email address" value = {this.state.email} onChange = {this.onEmailChange}/>
                 <span class = "icon is-small is-left">
                     <i class="fas fa envelope"> </i>
                 </span>
@@ -31,10 +73,10 @@ const Feedback = props => {
             <label class='label'>Subject</label>
             <div class='control'>
                 <div class = "select">
-                    <select>
-                        <option>Select Dropdown</option>
-                        <option> Feedback </option>
-                        <option> Webpage design </option>
+                    <select value = {this.state.subject} onChange = {this.onSubjectChange}>
+                        <option value ="Select Dropdown">Select Dropdown</option>
+                        <option value = "Feedback"> Feedback </option>
+                        <option value = "Webpage Design"> Webpage Design </option>
                     </select>
                 </div>
             </div>
@@ -42,13 +84,13 @@ const Feedback = props => {
             <div class="field">
                 <label class="label">Type your Message here!</label>
                 <div class="control">
-                    <textarea class="textarea" placeholder ="Write your message!"></textarea>
+                    <textarea class="textarea" placeholder ="Write your message!" value = {this.state.message} onChange = {this.onMessageChange}></textarea>
                 </div>
             </div>
 
             <div class = "field is-grouped">
                 <div class="control">
-                    <button class="button is-primary"> Submit</button>
+                    <button class="button is-primary" onClick = {this.formSubmit}> Submit</button>
                 </div>
                 <div class="control">
                     <button class="button is-danger"> Cancel </button>
@@ -60,6 +102,7 @@ const Feedback = props => {
     </section>
 
     )
+}
 }
 
 
