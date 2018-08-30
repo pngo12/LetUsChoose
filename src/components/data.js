@@ -13,55 +13,55 @@ const Data = [
         ethnicity: 'Italian',
         genre: 'Pizza',
         budget: '$$',
-        alcohol: 'true',
+        alcohol: 'yes',
         attire: 'Casual',
         dineIn: 'dine-in',
-        takeOut: 'take-out',
-        photo: <img src={NorthItalia}/>
+        takeOut: 'yes',
+        photo: NorthItalia
     },
     {
         name: 'HiroNori Craft Ramen',
         ethnicity: 'Japanese',
         genre: 'Ramen',
         budget: '$$',
-        alcohol: 'true',
+        alcohol: 'yes',
         attire: 'Casual',
         dineIn: 'dine-in',
-        takeOut: 'take-out',
-        photo: <img src={HiroNori}/>
+        takeOut: 'yes',
+        photo: HiroNori
     },
     {
         name: 'Agora Churrascaria',
         ethnicity: 'Brazilian',
         genre: 'Barbecue',
         budget: '$$$',
-        alcohol: 'true',
+        alcohol: 'yes',
         attire: 'Casual',
         dineIn: 'dine-in',
-        takeOut: 'take-out',
-        photo: <img src={AgoraChurrascaria}/>
+        takeOut: 'yes',
+        photo: AgoraChurrascaria
     },
     {
         name: 'H2O Poke & Grill',
         ethnicity: 'Hawaiian',
         genre: 'Poke',
         budget: '$',
-        alcohol: 'false',
+        alcohol: 'no',
         attire: 'Casual',
         dineIn: 'dine-in',
-        takeOut: 'take-out',
-        photo: <img src={H20PokeandGrill}/>
+        takeOut: 'yes',
+        photo: H20PokeandGrill
     },
     {
         name: 'Din Tai Fung',
         ethnicity: 'Taiwanese',
         genre: 'Dim Sum',
         budget: '$$',
-        alcohol: 'true',
+        alcohol: 'yes',
         attire: 'Casual',
         dineIn: 'dine-in',
-        takeOut: 'take-out',
-        photo: <img src={DinTaiFung}/>
+        takeOut: 'yes',
+        photo: DinTaiFung
         
     },
     {
@@ -69,11 +69,11 @@ const Data = [
         ethnicity: 'Vietnamese',
         genre: 'Soup/Noodles',
         budget: '$',
-        alcohol: 'false',
+        alcohol: 'no',
         attire: 'Casual',
         dineIn: 'dine-in',
-        takeOut: 'take-out',
-        photo: <img src={PhoTasty}/>
+        takeOut: 'yes',
+        photo: PhoTasty
     }
 ]
 
