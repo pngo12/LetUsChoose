@@ -18,10 +18,6 @@ import React from 'react';
 //         name: 'North Italia',
 //         Ethnicity: 'Italian',
 //         Genre: 'Pizza',
-//         // Budget: '$$',
-//         // Alcohol: true,
-//         // Distance: '3.3 miles',
-//         // Attire: 'Casual'
 //     }
 // ]
 
