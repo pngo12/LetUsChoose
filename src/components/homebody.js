@@ -3,8 +3,8 @@ import React from 'react';
 const HomeBody = () => {
     return ( 
             
-            <section class="section is-large is-link">
-                <div class="container">
+            <section className="section is-large is-link">
+                <div className="container">
                     <div className="columns">
                         <div className="column">
                         <h1 className="title has-text-centered">What's LUC?</h1>

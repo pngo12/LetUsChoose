@@ -24,9 +24,14 @@ class InputForm extends Component {
 
         console.log(randomizeOptions)
 
-        if (randomizeOptions === 0) {
-            console.log(randomOptions[0])
-        } else console.log(randomOptions[1])
+    //     if (randomizeOptions === 0) {
+    //         console.log(randomOptions[0])
+    //     } else console.log(randomOptions[1])
+    // }
+
+            if (randomizeOptions === randomOptions[randomizeOptions]) {
+            console.log(randomOptions[randomizeOptions])
+        } else console.log('That didn\'t work.')
     }
 
 

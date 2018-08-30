@@ -13,7 +13,7 @@ const HeroBody = props => {
                         <h1 className="title is-2">
                             Tired of figuring out where to eat?<br /></h1>
                         <h2 className="subtitle is-3"> We'll take care of that.</h2>
-                        <a class="button is-large is-warning is-hovered" onClick={() => {
+                        <a className="button is-large is-warning is-hovered" onClick={() => {
                             props.changePage(INPUT_PAGE)
                         }}
                         >Get Started</a></div>
