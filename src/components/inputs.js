@@ -36,7 +36,6 @@ class InputForm extends Component {
             randomOptions = [...chosenEthnicity, ...chosenGenre];
         }
 
-
         const randomizeOptions = Math.floor(Math.random() * randomOptions.length)
         this.setState({
             randomChoice: randomOptions[randomizeOptions],
@@ -51,17 +50,11 @@ class InputForm extends Component {
         })
     }
 
-
     dualOnClick = () => {
-        // if (this.state.randomChoice === '') {
-        //     this.randomAll()
-        //     this.toggleHidden()
-        // } else 
         this.randomize()
         this.toggleHidden()
     }
 
-    
     redraw = () => {
         this.setState({
             chosenEthn: '',
