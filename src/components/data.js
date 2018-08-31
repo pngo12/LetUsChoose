@@ -58,7 +58,10 @@ import AJRestaurant from '../images/AJRestaurant.png';
 import Pacifica from '../images/Pacifica.png';
 import CapitalNoodleBar from '../images/CapitalNoodleBar.png';
 import JingsKitchen from '../images/JingsKitchen.png';
-
+import ShinSenGumi from '../images/ShinSenGumi.png';
+import PepperLunch from '../images/PepperLunch.png';
+import HiHouse from '../images/HiHouse.png';
+import SawleafCafe from '../images/SawleafCafe.png';
 
 const Data = [
     {
@@ -75,7 +78,7 @@ const Data = [
     {
         name: 'HiroNori Craft Ramen',
         ethnicity: 'Japanese',
-        genre: 'Ramen',
+        genre: 'Soup/Noodles',
         budget: '$$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -549,7 +552,7 @@ const Data = [
         {
         name: 'The Stand',
         ethnicity: 'American',
-        genre: 'burgers',
+        genre: 'Burgers',
         budget: '$$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -560,7 +563,7 @@ const Data = [
         {
         name: 'American Grub',
         ethinicity: 'American',
-        genre: 'burgers',
+        genre: 'Burgers',
         budget: '$$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -582,7 +585,7 @@ const Data = [
         {
         name: 'Stonefire Grill',
         ethnicity: 'American',
-        genre: 'barbeque',
+        genre: 'Barbeque',
         budget: '$$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -604,7 +607,7 @@ const Data = [
         {
         name: 'A & J Restaurant',
         ethnicity: 'Chinese',
-        genre: 'Noodles',
+        genre: 'Soup/Noodles',
         budget: '$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -615,7 +618,7 @@ const Data = [
         {
         name: 'Jing\'s Kitchen',
         ethnicity: 'Chinese',
-        genre: 'Chinese',
+        genre: 'Rice/Noodles',
         budget: '$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -626,7 +629,7 @@ const Data = [
         {
         name: 'Hi House',
         ethnicity: 'Chinese',    
-        genre: 'dim-sum',
+        genre: 'Dim Sum',
         budget: '$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -637,7 +640,7 @@ const Data = [
         {
         name: 'Capital Noodle Bar',
         ethnicity: 'Chinese',
-        genre: 'Noodles',
+        genre: 'Soup/Noodles',
         budget: '$$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -648,7 +651,7 @@ const Data = [
         {
         name: 'JA Jiaozi Authentic Dumplings',
         ethnicity: 'Chinese',
-        benre: 'dim-sum',
+        benre: 'Dim Sum',
         budget: '$$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -659,7 +662,7 @@ const Data = [
         {
         name: 'Pho Ba Co',
         ethnicity: 'Vietnamese',
-        genre: 'Noodles',
+        genre: 'Soup/Noodles',
         budget: '$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -681,7 +684,7 @@ const Data = [
         {
         name: 'Phans55',
         ethnicity: 'Vietnamese',
-        genre: 'seafood',
+        genre: 'Seafood',
         budget: '$$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -692,7 +695,7 @@ const Data = [
         {
         name: 'Thuan Kieu Express',
         ethnicity: 'Vietnamese',
-        genre: 'Noodles',
+        genre: 'Soup/Noodles',
         budget: '$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -703,7 +706,7 @@ const Data = [
         {
         name: ' Pho Saigon Pearl',
         ethnicity: 'Vietnamese',
-        genre: 'Noodles',
+        genre: 'Soup/Noodles',
         budget: '$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -713,8 +716,8 @@ const Data = [
         },
         {
         name: 'Apola Gyro Grill',
-        ethnicity: 'Mediterranean',
-        genre: 'Greek',
+        ethnicity: 'Greek',
+        genre: 'Mediterranean',
         budget: '$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -724,8 +727,8 @@ const Data = [
         },
         {
         name: 'Christakis Greek Cuisine',
-        ethnicity: 'Mediterranean',
-        genre: 'Greek',
+        ethnicity: 'Greek',
+        genre: 'Mediterranean',
         budget: '$$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -735,8 +738,8 @@ const Data = [
         },
         {
         name: 'Luna Grill Westpark',
-        ethnicity: 'Mediterranean',
-        genre: 'Greek',                
+        ethnicity: 'Greek',
+        genre: 'Mediterranean',                
         budget: '$$',                
         alcohol: 'yes',               
         attire: 'Casual',                              
@@ -746,8 +749,8 @@ const Data = [
         },
         {
         name: 'Chef Ekrem\'s Mediterranean Grill',
-        ethnicity: 'Mediterranean',                
-        genre: 'Greek',                
+        ethnicity: 'Greek',                
+        genre: 'Mediterranean',                
         budget: '$',                
         alcohol: 'yes',                
         attire: 'Casual',                
@@ -757,8 +760,8 @@ const Data = [
         },
         {
         name: 'Greek Bistro',
-        ethnicity: 'Mediterranean',
-        genre: 'Greek',
+        ethnicity: 'Greek',
+        genre: 'Mediterranean',
         budget: '$$',
         alcohol: 'yes',
         attire: 'Casual',
