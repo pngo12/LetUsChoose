@@ -40,8 +40,24 @@ import MaDeeThaiKitchen from '../images/MaDeeThaiKitchen.png';
 import HokkaidoRamenSantouka from '../images/HokkaidoRamenSantouka.png';
 import UrokoCafe from '../images/UrokoCafe.png';
 import Temakira from '../images/Temakira.png';
-import PepperLunch from '../images/PepperLunch.png';
-import ShinSenGumi from '../images/ShinSenGumi.png';
+import ApolaGyroGrill from '../images/ApolaGyroGrill.png';
+import TheStand from '../images/TheStand.png';
+import LunaGrillWestpark from '../images/LunaGrillWestpark.png';
+import ChefEkremsMediterraneanGrill from '../images/ChefEkremsMediterraneanGrill.png';
+import GreekBistro from '../images/GreekBistro.png';
+import JaJiaoziAuthenticDumplings from '../images/JaJiaoziAuthenticDumplings.png';
+import PhoBaCo from '../images/PhoBaCo.png';
+import Phans55 from '../images/Phans55.png';
+import ThuanKieuExpress from '../images/ThuanKieuExpress.png';
+import ChristakisGreekCuisine from '../images/ChristakisGreekCuisine.png';
+import PhoSaigonPearl from '../images/PhoSaigonPearl.png';
+import AmericanGrub from '../images/AmericanGrub.png';
+import EvansBrewing from '../images/EvansBrewing.png';
+import StonefireGrill from '../images/StonefireGrill.png';
+import AJRestaurant from '../images/AJRestaurant.png';
+import Pacifica from '../images/Pacifica.png';
+import CapitalNoodleBar from '../images/CapitalNoodleBar.png';
+import JingsKitchen from '../images/JingsKitchen.png';
 
 
 const Data = [
@@ -91,7 +107,7 @@ const Data = [
     },
     {
         name: 'Din Tai Fung',
-        ethnicity: 'Taiwanese',
+        ethnicity: 'Chinese',
         genre: 'Dim Sum',
         budget: '$$',
         alcohol: 'yes',
@@ -529,8 +545,227 @@ const Data = [
         takeOut: 'no',
         photo: HoneyPig,
         link: 'https://www.yelp.com/biz/honey-pig-bbq-irvine?osq=korean'
+        },
+        {
+        name: 'The Stand',
+        ethnicity: 'American',
+        genre: 'burgers',
+        budget: '$$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: TheStand,
+        link: 'https://www.yelp.com/biz/the-stand-irvine?osq=american'    
+        },
+        {
+        name: 'American Grub',
+        ethinicity: 'American',
+        genre: 'burgers',
+        budget: '$$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: AmericanGrub,
+        link: 'https://www.yelp.com/biz/american-grub-tustin?osq=american'    
+        },
+        {
+        name: 'Evan\'s Brewing',
+        ethnicity: 'American',
+        genre: 'Burgers',
+        budget: ' $',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: EvansBrewing,
+        link: 'https://www.yelp.com/biz/evans-brewing-irvine-2?osq=american'
+        },
+        {
+        name: 'Stonefire Grill',
+        ethnicity: 'American',
+        genre: 'barbeque',
+        budget: '$$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: StonefireGrill,
+        link: 'https://www.yelp.com/biz/stonefire-grill-irvine?osq=american'
+        },
+        {
+        name: '90 Pacifica',
+        ethnicity: 'American',
+        genre: 'Burgers',
+        budget: '$$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: Pacifica,
+        link: 'https://www.yelp.com/biz/90-pacifica-irvine-2?osq=american'
+        },
+        {
+        name: 'A & J Restaurant',
+        ethnicity: 'Chinese',
+        genre: 'Noodles',
+        budget: '$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: AJRestaurant,
+        link: 'https://www.yelp.com/biz/a-and-j-restaurant-irvine?osq=chinese'
+        },
+        {
+        name: 'Jing\'s Kitchen',
+        ethnicity: 'Chinese',
+        genre: 'Chinese',
+        budget: '$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: JingsKitchen,
+        link: 'https://www.yelp.com/biz/jings-kitchen-irvine?osq=chinese'
+        },
+        {
+        name: 'Hi House',
+        ethnicity: 'Chinese',    
+        genre: 'dim-sum',
+        budget: '$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: HiHouse,
+        link: 'https://www.yelp.com/biz/hi-house-irvine?osq=chinese'  
+        },
+        {
+        name: 'Capital Noodle Bar',
+        ethnicity: 'Chinese',
+        genre: 'Noodles',
+        budget: '$$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: CapitalNoodleBar,
+        link: 'https://www.yelp.com/biz/capital-noodle-bar-irvine?osq=chinese'
+        },
+        {
+        name: 'JA Jiaozi Authentic Dumplings',
+        ethnicity: 'Chinese',
+        benre: 'dim-sum',
+        budget: '$$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: JaJiaoziAuthenticDumplings,
+        link: 'https://www.yelp.com/biz/ja-jiaozi-authentic-dumplings-irvine?osq=chinese'
+        },
+        {
+        name: 'Pho Ba Co',
+        ethnicity: 'Vietnamese',
+        genre: 'Noodles',
+        budget: '$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: PhoBaCo,
+        link: 'https://www.yelp.com/biz/pho-ba-co-irvine?osq=vietnamese'
+        },
+        {
+        name: 'Sawleaf Cafe',
+        ethnicity: 'Vietnamese',
+        genre: 'Sandwiches',
+        budget: '$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: SawleafCafe,
+        link: 'https://www.yelp.com/biz/sawleaf-cafe-irvine?osq=vietnamese'    
+        },
+        {
+        name: 'Phans55',
+        ethnicity: 'Vietnamese',
+        genre: 'seafood',
+        budget: '$$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: Phans55,
+        link: 'https://www.yelp.com/biz/phans55-irvine-4?osq=vietnamese'
+        },
+        {
+        name: 'Thuan Kieu Express',
+        ethnicity: 'Vietnamese',
+        genre: 'Noodles',
+        budget: '$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: ThuanKieuExpress,
+        link: 'https://www.yelp.com/biz/thuan-kieu-express-lake-forest?osq=vietnamese' 
+        },
+        {
+        name: ' Pho Saigon Pearl',
+        ethnicity: 'Vietnamese',
+        genre: 'Noodles',
+        budget: '$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: PhoSaigonPearl,
+        link: 'https://www.yelp.com/biz/pho-saigon-pearl-irvine-2?osq=vietnamese' 
+        },
+        {
+        name: 'Apola Gyro Grill',
+        ethnicity: 'Mediterranean',
+        genre: 'Greek',
+        budget: '$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: ApolaGyroGrill,
+        link: 'https://www.yelp.com/biz/apola-gyro-grill-irvine?osq=greek' 
+        },
+        {
+        name: 'Christakis Greek Cuisine',
+        ethnicity: 'Mediterranean',
+        genre: 'Greek',
+        budget: '$$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: ChristakisGreekCuisine,
+        Link: 'https://www.yelp.com/biz/christakis-greek-cuisine-tustin?osq=greek'   
+        },
+        {
+        name: 'Luna Grill Westpark',
+        ethnicity: 'Mediterranean',
+        genre: 'Greek',                
+        budget: '$$',                
+        alcohol: 'yes',               
+        attire: 'Casual',                              
+        takeOut: 'yes',
+        photo: LunaGrillWestpark,
+        link: 'https://www.yelp.com/biz/luna-grill-westpark-irvine?osq=greek'
+        },
+        {
+        name: 'Chef Ekrem\'s Mediterranean Grill',
+        ethnicity: 'Mediterranean',                
+        genre: 'Greek',                
+        budget: '$',                
+        alcohol: 'yes',                
+        attire: 'Casual',                
+        takeOut: 'yes',
+        photo: ChefEkremsMediterraneanGrill,
+        link: 'https://www.yelp.com/biz/chef-ekrems-mediterranean-grill-irvine?osq=greek'
+        },
+        {
+        name: 'Greek Bistro',
+        ethnicity: 'Mediterranean',
+        genre: 'Greek',
+        budget: '$$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        takeOut: 'yes',
+        photo: GreekBistro,
+        link: 'https://www.yelp.com/biz/greek-bistro-laguna-hills?osq=greek'  
         }
-    
 ]
 
 export default Data;
