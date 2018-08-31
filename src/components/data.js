@@ -4,21 +4,22 @@ import DinTaiFung from '../images/DinTaiFung.png';
 import H20PokeandGrill from '../images/H20PokeandGrill.png';
 import HiroNori from '../images/HiroNori.png';
 import PhoTasty from '../images/PhoTasty.png';
-import Angelinas from '..images/Angelinas';
-import ChaCha from '../images/ChaCha';
-import Enoteca from '../images/Enoteca';
-import haLong from '../images/haLong';
-import LaSirena from '..images/LaSirena'
-import Puesto from '..images/Puesto'
-import Silvas from '..images/Silas'
-import TexasDeBrazil from '..images/TexasDeBrazil'
-import CAVA from '../images/CAVA';
-import DonerG from '..images/DonerG';
-import KebabShop from '../images/KebabShop'
-import LunaGrill from '..images/LunaGrill'
-import Aloha from '..images/Aloha'
-import DaLuau from '..images/Daluau'
-import LL from '..images/LL'
+import Angelinas from '..images/Angelinas.png';
+import ChaCha from '../images/ChaCha.png';
+import Enoteca from '../images/Enoteca.png';
+import haLong from '../images/haLong.png';
+import LaSirena from '..images/LaSirena.png'
+import Puesto from '..images/Puesto.png'
+import Silvas from '..images/Silas.png'
+import TexasDeBrazil from '..images/TexasDeBrazil.png'
+import CAVA from '../images/CAVA.png';
+import DonerG from '..images/DonerG.png';
+import KebabShop from '../images/KebabShop.png';
+import LunaGrill from '..images/LunaGrill.png';
+import Aloha from '..images/Aloha.png';
+import DaLuau from '..images/Daluau.png';
+import LL from '..images/LL.png';
+import ilFornaio from '..images/ilFornaio.png';
 
 
 const Data = [
