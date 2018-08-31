@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import shrug from '../shrug.png';
-import manshrugging from '../manshrugging.png';
+import shrug from '../images/shrug.png';
+import manshrugging from '../images/manshrugging.png';
 
 const INPUT_PAGE = 'INPUT_PAGE'
 

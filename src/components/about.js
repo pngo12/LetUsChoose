@@ -1,8 +1,7 @@
 import React from 'react';
-import Navbar from './navbar'
-import phillip from '../phillip.png'
-import kevin from '../kevin.jpg'
-import john from '../john.jpg'
+import phillip from '../images/phillip.png'
+import kevin from '../images/kevin.jpg'
+import john from '../images/john.jpg'
 
 const About = () => {
     return ( 
@@ -36,9 +35,9 @@ const About = () => {
                     <div className="column circle"> <div className="circle"></div></div>
                 </div> <br />
                 <div className="columns">
-                    <div className="column"><figure> <img className="aboutMe" src={phillip}/></figure>Phillip Ngo</div>
-                    <div className="column"><figure> <img className="aboutMe" src={kevin}/></figure>Kevin Moon</div>
-                    <div className="column"><figure> <img className="aboutMe" src={john}/></figure>John Park</div>
+                    <div className="column"><figure> <img className="aboutMe" src={phillip} alt="one of the makers of this site."/></figure>Phillip Ngo</div>
+                    <div className="column"><figure> <img className="aboutMe" src={kevin} alt="one of the makers of this site."/></figure>Kevin Moon</div>
+                    <div className="column"><figure> <img className="aboutMe" src={john} alt="one of the makers of this site."/></figure>John Park</div>
                 </div>
             </div>
             </section>

@@ -6,8 +6,8 @@ class InputForm extends Component {
     state = {
         chosenEthn: '',
         chosenGn: '',
-        ethnicity: ['',"Italian", 'Japanese', 'Brazilian', 'Hawaiian', 'Taiwanese', 'Vietnamese', 'No Preference'],
-        genre: ['','Pizza', 'Ramen', 'Barbecue', 'Poke', 'Dim Sum', 'Soup/Noodles', 'No Preference'],
+        ethnicity: ['',"Italian", 'Japanese', 'Brazilian', 'Hawaiian', 'Taiwanese', 'Vietnamese', 'Mediterranean', 'No Preference'],
+        genre: ['','Pizza', 'Ramen', 'Barbecue', 'Poke', 'Dim Sum', 'Soup/Noodles', 'Tacos', 'Gyros', 'Kebabs', 'Breakfast/Brunch', 'Kalbi', 'No Preference'],
         randomChoice: '',
         isHidden: true
     }
@@ -24,16 +24,14 @@ class InputForm extends Component {
 
     
     randomize = () => {
-        const chosenEthnicity = Data.find(x => x.ethnicity === this.state.chosenEthn)
-        const chosenGenre = Data.find(x => x.genre === this.state.chosenGn)
-        const randomOptions = [chosenEthnicity, chosenGenre]
+        const chosenEthnicity = Data.filter(x => x.ethnicity === this.state.chosenEthn)
+        const chosenGenre = Data.filter(x => x.genre === this.state.chosenGn)
+        const randomOptions = [...chosenEthnicity, ...chosenGenre]
         const randomizeOptions = Math.floor(Math.random() * randomOptions.length)
-        
-        console.log(chosenEthnicity, chosenGenre)
-        console.log(randomizeOptions)
-        console.log(randomOptions[randomizeOptions])
         this.setState({
-            randomChoice: randomOptions[randomizeOptions]
+            randomChoice: randomOptions[randomizeOptions],
+            chosenEthn: '',
+            chosenGn: ''
         })
     }
     dualOnClick = () => {

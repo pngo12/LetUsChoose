@@ -9,7 +9,7 @@ const Footer = props => {
                 <div className="row">
                     <p>
                     © <strong>LUC</strong> is built by Kevin Moon, John Park, and Phillip Ngo. This is an open source project.
-            Please feel free to contribute here, or send us feedback <a href="#"
+            Please feel free to <a href="https://github.com/pngo12/youpick.git">contribute here</a>, or send us feedback <a
             onClick={() => {
                 props.changePage(FEEDBACK_PAGE)
             }}

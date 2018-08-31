@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 const HOME_PAGE = 'HOME_PAGE'
-const ABOUT_PAGE = 'ABOUT_PAGE'
-const FEEDBACK_PAGE = 'FEEDBACK_PAGE'
 
 class Feedback extends Component {
     state = {
@@ -14,27 +12,12 @@ class Feedback extends Component {
     thankYouAlert = () => {
      alert("Thank you for your feedback! We will address this shortly!");
     }    
-      onNameChange = e => {
-          this.setState({
-              name: e.target.value
-          });
-      }
-      onEmailChange = e => {
-          this.setState({
-               email: e.target.value
-          });
-      }
-      onSubjectChange = e => {
+
+    onChange = e => {
         this.setState({
-             subject: e.target.value
-        });
+            [e.target.name]: e.target.value
+        })
     }
-    onMessageChange = e => {
-        this.setState({
-             message: e.target.value
-        });
-    }
-    
     
       formSubmit = e => {
           e.preventDefault();
@@ -47,7 +30,6 @@ class Feedback extends Component {
               message: ""
           })
       }
-    
     render() {
     return ( 
         <section className="section is-medium" id="is-medium">
@@ -59,18 +41,18 @@ class Feedback extends Component {
         <div className = "field">
             <label className = "label"> Name</label>
             <div className="control">
-            <input className="input" type = 'text' placeholder = "First and Last Name" value = {this.state.name} onChange = {this.onNameChange}/>
+            <input className="input" type = 'text' placeholder = "First and Last Name" value = {this.state.name} onChange = {this.onChange} name="name"/>
             </div>
 
             <label className = "label"> Email </label>
             <div className="control">
-                <input className="input" type="email" placeholder="Please enter your email address" value = {this.state.email} onChange = {this.onEmailChange}/>
+                <input className="input" type="email" placeholder="Please enter your email address" value = {this.state.email} onChange = {this.onChange} name="email"/>
             </div>
 
             <label className='label'>Subject</label>
             <div className='control'>
                 <div className = "select">
-                    <select value = {this.state.subject} onChange = {this.onSubjectChange}>
+                    <select value = {this.state.subject} onChange = {this.onChange} name="subject">
                         <option value ="Select Dropdown">Select Dropdown</option>
                         <option value = "Feedback"> Feedback </option>
                         <option value = "Webpage Design"> Webpage Design </option>
@@ -81,13 +63,13 @@ class Feedback extends Component {
             <div className="field">
                 <label className="label">Type your Message here!</label>
                 <div className="control">
-                    <textarea className="textarea" placeholder ="Write your message!" value = {this.state.message} onChange = {this.onMessageChange}></textarea>
+                    <textarea className="textarea" placeholder ="Write your message!" value = {this.state.message} onChange = {this.onChange} name="message"></textarea>
                 </div>
             </div>
 
             <div className = "field is-grouped">
                 <div className="control">
-                    <button type="submit" className="button is-primary" > Submit</button>
+                    <button type="submit" className="button is-primary"> Submit</button>
                     
                 </div>
                 <div className="control">

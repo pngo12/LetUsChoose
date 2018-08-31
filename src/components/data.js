@@ -1,11 +1,9 @@
-import React from 'react';
-import NorthItalia from '../NorthItalia.png'
-import AgoraChurrascaria from '../AgoraChurrascaria.png';
-import DinTaiFung from '../DinTaiFung.png';
-import H20PokeandGrill from '../H20PokeandGrill.png';
-import HiroNori from '../HiroNori.png';
-import PhoTasty from '../PhoTasty.png';
-
+import NorthItalia from '../images/NorthItalia.png'
+import AgoraChurrascaria from '../images/AgoraChurrascaria.png';
+import DinTaiFung from '../images/DinTaiFung.png';
+import H20PokeandGrill from '../images/H20PokeandGrill.png';
+import HiroNori from '../images/HiroNori.png';
+import PhoTasty from '../images/PhoTasty.png';
 
 const Data = [
     {
@@ -40,7 +38,7 @@ const Data = [
         alcohol: 'yes',
         attire: 'Casual',
         dineIn: 'dine-in',
-        takeOut: 'yes',
+        takeOut: 'no',
         photo: AgoraChurrascaria,
         link: 'https://www.yelp.com/biz/agora-churrascaria-irvine'
     },
@@ -153,6 +151,127 @@ const Data = [
         photo: PhoTasty,
         link: 'https://www.yelp.com/biz/il-fornaio-irvine?osq=italian'
     },
+    {
+        name: 'Puesto Los Olivos',
+        ethnicity: 'Mexican',
+        genre: 'Tacos',
+        budget: '$$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        dineIn: 'dine-in',
+        takeOut: 'no',
+        photo: PhoTasty,
+        link: 'https://www.yelp.com/biz/puesto-los-olivos-irvine-irvine-2?osq=Mexican+food'
+    },
+    {
+        name: 'La Sirena Grill',
+        ethnicity: 'Mexican',
+        genre: 'Tacos',
+        budget: '$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        dineIn: 'dine-in',
+        takeOut: 'yes',
+        photo: PhoTasty,
+        link: 'https://www.yelp.com/biz/la-sirena-grill-irvine-2?osq=Mexican+food'
+    },
+    {
+        name: 'Cha Cha\'s Latin Kitchen',
+        ethnicity: 'Mexican',
+        genre: 'Tacos',
+        budget: '$$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        dineIn: 'dine-in',
+        takeOut: 'yes',
+        photo: PhoTasty,
+        link: 'https://www.yelp.com/biz/cha-chas-latin-kitchen-irvine?osq=Mexican+food'
+    },
+    {
+        name: 'CAVA',
+        ethnicity: 'Mediterranean',
+        genre: 'Gyros',
+        budget: '$$',
+        alcohol: 'no',
+        attire: 'Casual',
+        dineIn: 'dine-in',
+        takeOut: 'yes',
+        photo: PhoTasty,
+        link: 'https://www.yelp.com/biz/cava-irvine?osq=Mediterranean+Food'
+    },
+    {
+        name: 'The Kebab Shop',
+        ethnicity: 'Mediterranean',
+        genre: 'Kebabs',
+        budget: '$$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        dineIn: 'dine-in',
+        takeOut: 'yes',
+        photo: PhoTasty,
+        link: 'https://www.yelp.com/biz/the-kebab-shop-irvine-3?osq=Mediterranean+Food'
+    },
+    {
+        name: 'Luna Grill',
+        ethnicity: 'Mediterranean',
+        genre: 'Gyros',
+        budget: '$$',
+        alcohol: 'yes',
+        attire: 'Casual',
+        dineIn: 'dine-in',
+        takeOut: 'yes',
+        photo: PhoTasty,
+        link: 'https://www.yelp.com/biz/luna-grill-westpark-irvine?osq=Mediterranean+Food'
+    },
+    {
+        name: 'Donr G',
+        ethnicity: 'Mediterranean',
+        genre: 'Gyros',
+        budget: '$',
+        alcohol: 'no',
+        attire: 'Casual',
+        dineIn: 'dine-in',
+        takeOut: 'yes',
+        photo: PhoTasty,
+        link: 'https://www.yelp.com/biz/donerg-turkish-and-mediterranean-grill-irvine-irvine?osq=Mediterranean+Food'
+    },
+    {
+        name: 'Da Luau Hawaiian Grill',
+        ethnicity: 'Hawaiian',
+        genre: 'Breakfast/Brunch',
+        budget: '$',
+        alcohol: 'no',
+        attire: 'Casual',
+        dineIn: 'dine-in',
+        takeOut: 'yes',
+        photo: PhoTasty,
+        link: 'https://www.yelp.com/biz/da-luau-hawaiian-grill-irvine'
+    },
+    {
+        name: 'Aloha Hawaiian BBQ',
+        ethnicity: 'Hawaiian',
+        genre: 'Kalbi',
+        budget: '$',
+        alcohol: 'no',
+        attire: 'Casual',
+        dineIn: 'dine-in',
+        takeOut: 'yes',
+        photo: PhoTasty,
+        link: 'https://www.yelp.com/biz/aloha-hawaiian-bbq-tustin?osq=hawaiian+food'
+    },
+    {
+        name: 'L&L Hawaiian BBQ',
+        ethnicity: 'Hawaiian',
+        genre: 'Kalbi',
+        budget: '$',
+        alcohol: 'no',
+        attire: 'Casual',
+        dineIn: 'dine-in',
+        takeOut: 'yes',
+        photo: PhoTasty,
+        link: 'https://www.yelp.com/biz/l-and-l-hawaiian-barbecue-irvine?osq=hawaiian+food'
+    },
+    
     
 ]
 

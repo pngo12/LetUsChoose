@@ -6,7 +6,7 @@ const RenderOption = props => {
             <p className="title is-3">We chose {props.randomChoice.name} for you</p>
             <div className="card-image">
                 <figure className="image" id="size">
-                    <a href={props.randomChoice.link}><img src={props.randomChoice.photo} /></a>
+                    <a href={props.randomChoice.link}><img src={props.randomChoice.photo} alt="a rendering of the random option" /></a>
                 </figure>
             </div>
             <div className="card-content">
