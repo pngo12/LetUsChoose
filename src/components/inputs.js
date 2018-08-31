@@ -6,9 +6,10 @@ class InputForm extends Component {
     state = {
         chosenEthn: '',
         chosenGn: '',
-        ethnicity: ['',"Italian", 'Japanese', 'Brazilian', 'Hawaiian', 'Taiwanese', 'Vietnamese', 'Mediterranean', 'No Preference'],
-        genre: ['','Pizza', 'Ramen', 'Barbecue', 'Poke', 'Dim Sum', 'Soup/Noodles', 'Tacos', 'Gyros', 'Kebabs', 'Seafood', 'Rice/Noodles', 'Breakfast/Brunch', 'Kalbi', 'No Preference'],
+        ethnicity: ['No Preference', "Italian", 'Japanese', 'Brazilian', 'Hawaiian', 'Taiwanese', 'Vietnamese', 'Mediterranean'],
+        genre: ['No Preference', 'Pizza', 'Ramen', 'Barbecue', 'Poke', 'Dim Sum', 'Soup/Noodles', 'Tacos', 'Gyros', 'Kebabs', 'Seafood', 'Rice/Noodles', 'Breakfast/Brunch', 'Kalbi'],
         randomChoice: '',
+        noPreference: '',
         isHidden: true
     }
 
@@ -32,10 +33,28 @@ class InputForm extends Component {
             randomChoice: randomOptions[randomizeOptions],
         })
     }
+
+    randomAll = () => {
+        const random = Data.filter(x => x.ethnicity !== 'No Preference')
+        const randomIndex = Math.floor(Math.random() * random.length)
+        this.setState({
+            randomChoice: random[randomIndex]
+        })
+    }
+
+    noPrefAlert = () => {
+        alert("Please pick an option!")
+    }
+
     dualOnClick = () => {
+        if (this.state.chosenEthn === 'No Preference' && this.state.chosenGn === 'No Preference') {
+            this.randomAll()
+            this.toggleHidden()
+        } else 
         this.randomize()
         this.toggleHidden()
     }
+
     
     redraw = () => {
         this.setState({
@@ -82,7 +101,9 @@ class InputForm extends Component {
             <div className="column is-6">
                 {/* This hides the result until random button is clicked */}
                 {
-                    !this.state.isHidden && <RenderOption randomChoice={this.state.randomChoice} />
+                    !this.state.isHidden && <RenderOption 
+                    randomChoice={this.state.randomChoice} 
+                    />
                 }
                 </div>
             </div>
