@@ -7,7 +7,7 @@ class InputForm extends Component {
         chosenEthn: '',
         chosenGn: '',
         ethnicity: ['',"Italian", 'Japanese', 'Brazilian', 'Hawaiian', 'Taiwanese', 'Vietnamese', 'Mediterranean', 'No Preference'],
-        genre: ['','Pizza', 'Ramen', 'Barbecue', 'Poke', 'Dim Sum', 'Soup/Noodles', 'Tacos', 'Gyros', 'Kebabs', 'Breakfast/Brunch', 'Kalbi', 'No Preference'],
+        genre: ['','Pizza', 'Ramen', 'Barbecue', 'Poke', 'Dim Sum', 'Soup/Noodles', 'Tacos', 'Gyros', 'Kebabs', 'Seafood', 'Rice/Noodles', 'Breakfast/Brunch', 'Kalbi', 'No Preference'],
         randomChoice: '',
         isHidden: true
     }

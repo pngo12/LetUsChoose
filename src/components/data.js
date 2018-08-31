@@ -269,7 +269,7 @@ const Data = [
     {
         name: 'Aloha Hawaiian BBQ',
         ethnicity: 'Hawaiian',
-        genre: 'Kalbi',
+        genre: 'Barbecue',
         budget: '$',
         alcohol: 'no',
         attire: 'Casual',
@@ -280,7 +280,7 @@ const Data = [
     {
         name: 'L&L Hawaiian BBQ',
         ethnicity: 'Hawaiian',
-        genre: 'Kalbi',
+        genre: 'Barbecue',
         budget: '$',
         alcohol: 'no',
         attire: 'Casual',
@@ -291,7 +291,7 @@ const Data = [
     {
         name: 'Taiko',
         ethnicity: 'Japanese',
-        genre: 'Sushi',
+        genre: 'Seafood',
         budget: '$$',
         alcohol: 'yes',
         attire: 'Casual',
