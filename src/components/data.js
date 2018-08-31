@@ -4,22 +4,22 @@ import DinTaiFung from '../images/DinTaiFung.png';
 import H20PokeandGrill from '../images/H20PokeandGrill.png';
 import HiroNori from '../images/HiroNori.png';
 import PhoTasty from '../images/PhoTasty.png';
-import Angelinas from '..images/Angelinas.png';
+import Angelinas from '../images/Angelinas.png';
 import ChaCha from '../images/ChaCha.png';
 import Enoteca from '../images/Enoteca.png';
 import haLong from '../images/haLong.png';
-import LaSirena from '..images/LaSirena.png'
-import Puesto from '..images/Puesto.png'
-import Silvas from '..images/Silas.png'
-import TexasDeBrazil from '..images/TexasDeBrazil.png'
-import CAVA from '../images/CAVA.png';
-import DonerG from '..images/DonerG.png';
+import LaSirena from '../images/LaSirena.png'
+import Puesto from '../images/Puesto.png'
+import Silvas from '../images/Silvas.png'
+import TexasDeBrazil from '../images/TexasDeBrazil.png'
+import Cava from '../images/Cava.png';
+import DonerG from '../images/DonerG.png';
 import KebabShop from '../images/KebabShop.png';
-import LunaGrill from '..images/LunaGrill.png';
-import Aloha from '..images/Aloha.png';
-import DaLuau from '..images/Daluau.png';
-import LL from '..images/LL.png';
-import ilFornaio from '..images/ilFornaio.png';
+import LunaGrill from '../images/LunaGrill.png';
+import Aloha from '../images/Aloha.png';
+import DaLuau from '../images/DaLuau.png';
+import ll from '../images/ll.png';
+import ilFornaio from '../images/ilFornaio.png';
 
 
 const Data = [
@@ -213,7 +213,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'yes',
-        photo: CAVA,
+        photo: Cava,
         link: 'https://www.yelp.com/biz/cava-irvine?osq=Mediterranean+Food'
     },
     {
@@ -285,7 +285,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'yes',
-        photo: LL,
+        photo: ll,
         link: 'https://www.yelp.com/biz/l-and-l-hawaiian-barbecue-irvine?osq=hawaiian+food'
     },
     
