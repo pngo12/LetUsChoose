@@ -4,12 +4,11 @@ import RenderOption from './renderoption.js'
 
 class InputForm extends Component {  
     state = {
-        chosenEthn: '',
-        chosenGn: '',
+        chosenEthn: 'No Preference',
+        chosenGn: 'No Preference',
         ethnicity: ['No Preference', "Italian", 'Japanese', 'Brazilian', 'American', 'Hawaiian', 'Chinese', 'Vietnamese', 'Greek'],
         genre: ['No Preference', 'Pizza', 'Barbecue', 'Poke', 'Dim Sum', 'Soup/Noodles','Mediterranean', 'Tacos', 'Sandwiches', 'Gyros', 'Kebabs', 'Seafood', 'Rice/Noodles', 'Burgers', 'Breakfast/Brunch'],
         randomChoice: '',
-        noPreference: '',
         isHidden: true
     }
 
@@ -25,9 +24,19 @@ class InputForm extends Component {
     
     // The below takes the input, filters the choices, and sets the random choice state to the random restaurant
     randomize = () => {
-        const chosenEthnicity = Data.filter(x => x.ethnicity === this.state.chosenEthn)
-        const chosenGenre = Data.filter(x => x.genre === this.state.chosenGn)
-        const randomOptions = [...chosenEthnicity, ...chosenGenre]
+        const chosenEthnicity = Data.filter(x => this.state.chosenEthn === 'No Preference' ? true : x.ethnicity === this.state.chosenEthn)
+        const chosenGenre = Data.filter(x => this.state.chosenGn === 'No Preference' ? true : x.genre === this.state.chosenGn)
+        let randomOptions;
+        
+        if (this.state.chosenEthn === 'No Preference' && this.state.chosenGn !== 'No Preference') {
+            randomOptions = chosenGenre;
+        } else if (this.state.chosenEthn !== 'No Preference' && this.state.chosenGn === 'No Preference') {
+            randomOptions = chosenEthnicity;
+        } else {
+            randomOptions = [...chosenEthnicity, ...chosenGenre];
+        }
+
+
         const randomizeOptions = Math.floor(Math.random() * randomOptions.length)
         this.setState({
             randomChoice: randomOptions[randomizeOptions],
@@ -42,15 +51,12 @@ class InputForm extends Component {
         })
     }
 
-    noPrefAlert = () => {
-        alert("Please pick an option!")
-    }
 
     dualOnClick = () => {
-        if (this.state.chosenEthn === 'No Preference' && this.state.chosenGn === 'No Preference') {
-            this.randomAll()
-            this.toggleHidden()
-        } else 
+        // if (this.state.randomChoice === '') {
+        //     this.randomAll()
+        //     this.toggleHidden()
+        // } else 
         this.randomize()
         this.toggleHidden()
     }

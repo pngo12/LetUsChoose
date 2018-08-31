@@ -31,7 +31,7 @@ class Feedback extends Component {
           })
       }
     render() {
-    return ( 
+    return (
         <section className="section is-medium" id="is-medium">
         <h1 className ="title-page"> We value your input! </h1>
         <h2 className = "title-page2"> Please let us know what we can do better! </h2>

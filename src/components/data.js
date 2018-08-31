@@ -63,6 +63,7 @@ import PepperLunch from '../images/PepperLunch.png';
 import HiHouse from '../images/HiHouse.png';
 import SawleafCafe from '../images/SawleafCafe.png';
 
+
 const Data = [
     {
         name: 'North Italia',
