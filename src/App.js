@@ -7,11 +7,13 @@ import InputForm from './components/inputs'
 import Feedback from './components/feedback'
 import About from './components/about'
 import HeroBody from './components/herobody'
+import Signup from './components/signup'
 
 const HOME_PAGE = 'HOME_PAGE'
 const ABOUT_PAGE = 'ABOUT_PAGE'
 const FEEDBACK_PAGE = 'FEEDBACK_PAGE'
 const INPUT_PAGE = "INPUT_PAGE"
+const SIGNUP_PAGE = 'SIGNUP_PAGE'
 
 class App extends Component {
 
@@ -88,6 +90,20 @@ class App extends Component {
               changePage={this.changePage}
               />
               <InputForm
+              changePage={this.changePage}
+              />
+              <Footer 
+              changePage={this.changePage}
+              />
+              </div>
+          );
+          case SIGNUP_PAGE:
+          return (
+            <div>
+              <Navbar 
+              changePage={this.changePage}
+              />
+              <Signup
               changePage={this.changePage}
               />
               <Footer 

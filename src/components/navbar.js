@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 const HOME_PAGE = 'HOME_PAGE'
 const ABOUT_PAGE = 'ABOUT_PAGE'
 const FEEDBACK_PAGE = 'FEEDBACK_PAGE'
+const SIGNUP_PAGE = 'SIGNUP_PAGE'
 
 class Navbar extends Component {
   state = {
@@ -44,6 +45,9 @@ class Navbar extends Component {
               <a className="navbar-item" onClick={() => {
                 this.props.changePage(FEEDBACK_PAGE)
               }} >Give Us Feedback</a>
+              <a className="navbar-item" onClick={() => {
+                this.props.changePage(SIGNUP_PAGE)
+              }}>Login/Signup</a>
             </div>
           </div>
         </div>
