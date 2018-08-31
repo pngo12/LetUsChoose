@@ -22,6 +22,7 @@ class InputForm extends Component {
         })
     }
 
+    
     randomize = () => {
         const chosenEthnicity = Data.find(x => x.ethnicity === this.state.chosenEthn)
         const chosenGenre = Data.find(x => x.genre === this.state.chosenGn)
