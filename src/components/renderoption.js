@@ -17,7 +17,7 @@ const RenderOption = props => {
                             <p className="subtitle is-6 has-text-weight-bold">Is alcohol served? {props.randomChoice.alcohol}</p>
                             <p className="subtitle is-6 has-text-weight-bold">Does this restaurant have takeout?: {props.randomChoice.takeOut}</p>
                             <p className="subtitle is-6 has-text-weight-bold">This restaurants is: {props.randomChoice.budget}</p>
-                            <button className="button is-danger is-normal" onClick={props.randomize}>Not Happy? Redraw!</button>
+                            <button className="button is-danger is-normal" onClick={props.redraw}>Not Happy? Redraw!</button>
                         </div>
                     </div>
                 </div>

@@ -21,8 +21,8 @@ class InputForm extends Component {
             isHidden: false
         })
     }
-
     
+    // The below takes the input, filters the choices, and sets the random choice state to the random restaurant
     randomize = () => {
         const chosenEthnicity = Data.filter(x => x.ethnicity === this.state.chosenEthn)
         const chosenGenre = Data.filter(x => x.genre === this.state.chosenGn)
@@ -30,15 +30,21 @@ class InputForm extends Component {
         const randomizeOptions = Math.floor(Math.random() * randomOptions.length)
         this.setState({
             randomChoice: randomOptions[randomizeOptions],
-            chosenEthn: '',
-            chosenGn: ''
         })
     }
     dualOnClick = () => {
         this.randomize()
         this.toggleHidden()
     }
-        
+    
+    redraw = () => {
+        this.setState({
+            chosenEthn: '',
+            chosenGn: '',
+            isHidden: true
+        })
+    }
+
     render() {
         return ( 
             <section className="section is-large" id="biggest-container">
@@ -74,7 +80,7 @@ class InputForm extends Component {
                 {/* The below will render the random restaurant */}
                 <div className="column is-1"></div>
             <div className="column is-6">
-                
+                {/* This hides the result until random button is clicked */}
                 {
                     !this.state.isHidden && <RenderOption randomChoice={this.state.randomChoice} />
                 }

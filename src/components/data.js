@@ -4,6 +4,22 @@ import DinTaiFung from '../images/DinTaiFung.png';
 import H20PokeandGrill from '../images/H20PokeandGrill.png';
 import HiroNori from '../images/HiroNori.png';
 import PhoTasty from '../images/PhoTasty.png';
+import Angelinas from '..images/Angelinas';
+import ChaCha from '../images/ChaCha';
+import Enoteca from '../images/Enoteca';
+import haLong from '../images/haLong';
+import LaSirena from '..images/LaSirena'
+import Puesto from '..images/Puesto'
+import Silvas from '..images/Silas'
+import TexasDeBrazil from '..images/TexasDeBrazil'
+import CAVA from '../images/CAVA';
+import DonerG from '..images/DonerG';
+import KebabShop from '../images/KebabShop'
+import LunaGrill from '..images/LunaGrill'
+import Aloha from '..images/Aloha'
+import DaLuau from '..images/Daluau'
+import LL from '..images/LL'
+
 
 const Data = [
     {
@@ -88,7 +104,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'yes',
-        photo: PhoTasty,
+        photo: haLong,
         link: 'https://www.yelp.com/biz/ha-long-vietnamese-cuisine-irvine?osq=ha+long+vietnamese'
     },
     {
@@ -100,7 +116,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'no',
-        photo: PhoTasty,
+        photo: TexasDeBrazil,
         link: 'https://www.yelp.com/biz/texas-de-brazil-irvine-5?osq=brazilian+food'
     },
     {
@@ -112,7 +128,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'no',
-        photo: PhoTasty,
+        photo: Silvas,
         link: 'https://www.yelp.com/biz/silvas-brazilian-bar-and-grill-santa-ana?osq=brazilian+food'
     },
     {
@@ -124,7 +140,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'yes',
-        photo: PhoTasty,
+        photo: Enoteca,
         link: 'https://www.yelp.com/biz/cucina-enoteca-irvine-irvine-2?osq=italian'
     },
     {
@@ -136,7 +152,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'yes',
-        photo: PhoTasty,
+        photo: Angelinas,
         link: 'https://www.yelp.com/biz/angelinas-pizzeria-napoletana-irvine-2'
     },
     {
@@ -148,7 +164,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'yes',
-        photo: PhoTasty,
+        photo: ilFornaio,
         link: 'https://www.yelp.com/biz/il-fornaio-irvine?osq=italian'
     },
     {
@@ -160,7 +176,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'no',
-        photo: PhoTasty,
+        photo: Puesto,
         link: 'https://www.yelp.com/biz/puesto-los-olivos-irvine-irvine-2?osq=Mexican+food'
     },
     {
@@ -172,7 +188,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'yes',
-        photo: PhoTasty,
+        photo: LaSirena,
         link: 'https://www.yelp.com/biz/la-sirena-grill-irvine-2?osq=Mexican+food'
     },
     {
@@ -184,7 +200,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'yes',
-        photo: PhoTasty,
+        photo: ChaCha,
         link: 'https://www.yelp.com/biz/cha-chas-latin-kitchen-irvine?osq=Mexican+food'
     },
     {
@@ -196,7 +212,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'yes',
-        photo: PhoTasty,
+        photo: CAVA,
         link: 'https://www.yelp.com/biz/cava-irvine?osq=Mediterranean+Food'
     },
     {
@@ -208,7 +224,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'yes',
-        photo: PhoTasty,
+        photo: KebabShop,
         link: 'https://www.yelp.com/biz/the-kebab-shop-irvine-3?osq=Mediterranean+Food'
     },
     {
@@ -220,11 +236,11 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'yes',
-        photo: PhoTasty,
+        photo: LunaGrill,
         link: 'https://www.yelp.com/biz/luna-grill-westpark-irvine?osq=Mediterranean+Food'
     },
     {
-        name: 'Donr G',
+        name: 'Doner G',
         ethnicity: 'Mediterranean',
         genre: 'Gyros',
         budget: '$',
@@ -232,7 +248,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'yes',
-        photo: PhoTasty,
+        photo: DonerG,
         link: 'https://www.yelp.com/biz/donerg-turkish-and-mediterranean-grill-irvine-irvine?osq=Mediterranean+Food'
     },
     {
@@ -244,7 +260,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'yes',
-        photo: PhoTasty,
+        photo: DaLuau,
         link: 'https://www.yelp.com/biz/da-luau-hawaiian-grill-irvine'
     },
     {
@@ -256,7 +272,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'yes',
-        photo: PhoTasty,
+        photo: Aloha,
         link: 'https://www.yelp.com/biz/aloha-hawaiian-bbq-tustin?osq=hawaiian+food'
     },
     {
@@ -268,7 +284,7 @@ const Data = [
         attire: 'Casual',
         dineIn: 'dine-in',
         takeOut: 'yes',
-        photo: PhoTasty,
+        photo: LL,
         link: 'https://www.yelp.com/biz/l-and-l-hawaiian-barbecue-irvine?osq=hawaiian+food'
     },
     

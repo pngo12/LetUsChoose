@@ -33,12 +33,12 @@ const HomeBody = props => {
                 <div className="columns">
                     <div className="column is-5"></div>
                     <div className="column is-7">
-                        <div className="is-inline-block">
+                            <span className='is-flex is-pulled-right'>
                             <figure className="image is-128x128"><img src={manNo} /></figure>
                                 <figure className="image is-128x128"><img src={girlNo} /></figure>
-                                 </div>
-
+                            </span>
                         <h1 className='is-pulled-right title'>Indecisive bunch are ya?</h1><br />
+
                         <p className="content is-pulled-right">If your group of friends are the indecisive type then we're the solution type.
                         LUC isn't just for your boo, it's for the homies too. Let us know what your options are, and we'll randomly choose one.</p>
                     </div>
