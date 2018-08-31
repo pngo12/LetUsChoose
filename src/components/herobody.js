@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import shrug from '../images/shrug.png';
 import manshrugging from '../images/manshrugging.png';
+const SIGNUP_PAGE = 'SIGNUP_PAGE'
 
-const INPUT_PAGE = 'INPUT_PAGE'
 
 const HeroBody = props => {
     return (
@@ -15,7 +15,7 @@ const HeroBody = props => {
                             Tired of figuring out where to eat?<br /></h1>
                         <h2 className="subtitle is-3"> We'll take care of that.</h2>
                         <a className="button is-large is-warning is-hovered" onClick={() => {
-                            props.changePage(INPUT_PAGE)
+                            props.changePage(SIGNUP_PAGE)
                         }}
                         >Get Started</a></div>
                     <div className="column">

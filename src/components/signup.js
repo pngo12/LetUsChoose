@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 class Signup extends Component {
     state = { 
         isLoggedIn: false,
-        userName: "",
-        passWord: "",
+        username: "",
+        password: "",
         email: ""
 
      }
@@ -20,31 +20,37 @@ class Signup extends Component {
         e.preventDefault()
     }
 
+    success = () => {
+        if (this.state.username === 'abc' && this.state.password === 'abc') {
+
+        }
+    }
+
+
     render() {
         return (
             <div className="container">
                 <section class="section is-large">
-                    <h1 class="title text-centered">Let's get you signed up</h1>
-                    <div className="card">
-                        <div className="columns">
-                        <div className="column is-half">
+                        <div className="columns is-centered">
+                            <div className="column is-half">
+                                <h1 class="title text-centered">Let's get you signed up</h1>
                         <form onSubmit={this.formSubmit}>
                             <div className="field">
-                                <label className="label">Your Username</label>
+                                <label className="label">Your username</label>
                                     <div className="control">
-                                        <input className="input is-medium" name="userName" type="text" onChange={this.onChange} value={this.state.userName}></input>
+                                        <input className="input is-medium" name="username" type="text" onChange={this.onChange} value={this.state.username}></input>
                                     </div>
                                 </div>
                                 <div className="field">
                                     <label className="label">Your Email Address</label>
                                         <div className="control">
-                                            <input className="input is-medium" name="passWord" type="password" onChange={this.onChange} value={this.state.email}></input>
+                                            <input className="input is-medium" name="email" type="email" onChange={this.onChange} value={this.state.email}></input>
                                         </div>
                                     </div>
                                 <div className="field">
-                                    <label className="label">Your Password</label>
+                                    <label className="label">Your password</label>
                                         <div className="control">
-                                            <input className="input is-medium" name="passWord" type="password" onChange={this.onChange} value={this.state.passWord}></input>
+                                            <input className="input is-medium" name="password" type="password" onChange={this.onChange} value={this.state.password}></input>
                                         </div>
                                     </div>
                                 <button className="button is-info">Sign up!</button>
@@ -52,10 +58,8 @@ class Signup extends Component {
                         <p>Already a user? <a href="#">Login here.</a></p>
                         </div>
                     </div>
-                </div>
             </section>
         </div>
-
         );
     }
 }
