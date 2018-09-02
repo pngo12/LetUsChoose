@@ -25,35 +25,18 @@ class Feedback extends Component {
             [e.target.name]: e.target.value
         })
     }
-    
-    formSubmit = e => {
-        e.preventDefault();
-        this.props.addtoFeedback(this.state);
-        this.onOpenModal();
-        this.setState({
-            name: "",
-            email: "",
-            subject: "",
-            message: "",
-    })
-}
-    
-    
-    //     formSubmit = e => {
-    //       if (this.state.name === '' || this.state.email === '' || this.state.subject === '' || this.state.message === ''){
-    //         console.log('tell them to fill the forms.')
-    //       } else 
-          
-    //       e.preventDefault();
-    //       this.props.addtoFeedback(this.state);
-    //       this.onOpenModal();
-    //       this.setState({
-    //           name: "",
-    //           email: "",
-    //           subject: "",
-    //           message: "",
-    //   })
-    // }
+        
+        formSubmit = e => {          
+          e.preventDefault();
+          this.props.addtoFeedback(this.state);
+          this.setState({
+              name: "",
+              email: "",
+              subject: "",
+              message: "",
+      })
+            this.onOpenModal();
+    }
 
     render() {
         const { open } = this.state;
@@ -67,12 +50,12 @@ class Feedback extends Component {
         <div className = "field">
             <label className = "label"> Name</label>
             <div className="control">
-            <input className="input" type = 'text' placeholder = "First and Last Name" value = {this.state.name} onChange = {this.onChange} name="name"/>
+            <input className="input" type = 'text' placeholder = "First and Last Name" value = {this.state.name} onChange = {this.onChange} name="name" required/>
             </div>
 
             <label className = "label"> Email </label>
             <div className="control">
-                <input className="input" type="email" placeholder="Please enter your email address" value = {this.state.email} onChange = {this.onChange} name="email"/>
+                <input className="input" type="email" placeholder="Please enter your email address" value = {this.state.email} onChange = {this.onChange} name="email" required/>
             </div>
 
             <label className='label'>Subject</label>
@@ -89,7 +72,7 @@ class Feedback extends Component {
             <div className="field">
                 <label className="label">Type your Message here!</label>
                 <div className="control">
-                    <textarea className="textarea" placeholder ="Write your message!" value = {this.state.message} onChange = {this.onChange} name="message"></textarea>
+                    <textarea className="textarea" placeholder ="Write your message!" value = {this.state.message} onChange = {this.onChange} name="message" required></textarea>
                 </div>
             </div>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import HomeBanner from './homebanner'
 import shocked from '../images/shocked.png';
 import manNo from '../images/manNo.png';
 import girlNo from '../images/girlNo.png';
@@ -6,8 +7,7 @@ const SIGNUP_PAGE = 'SIGNUP_PAGE'
 
 const HomeBody = props => {
     return ( 
-            
-            <section className="section is-medium is-clear-fix" id="big-section">
+            <section className="section is-medium">
                 <div className="container">
                     <div className="columns has-text-centered">
                         <div className="column is-three-fifths is-offset-one-fifth">
@@ -18,7 +18,12 @@ const HomeBody = props => {
                             </p>
                         </div>
                     </div>
-                    <section className="section is-small"></section>
+                </div>
+            
+                {/* Start full width below */}
+
+            <HomeBanner />
+                    {/* <section className="section is-small"></section>
                     <div className="columns">
                         <div className="column is-5">
                             <figure className="image is-128x128"><img src={shocked} /></figure>
@@ -38,13 +43,13 @@ const HomeBody = props => {
                                         <figure className="image is-128x128 is-pulled-right"><img src={girlNo} /></figure>
                                     </div>
                                 </div>
-                            <h1 className='is-pulled-right title'>Indecisive bunch are ya?</h1><br />
+                            <h1 className='is-pulled-right title'>Indecisive group?</h1><br />
                         <p className="content is-pulled-right">If your group of friends are the indecisive type then we're the solution type.
                         LUC isn't just for your boo, it's for the homies too. Let us know what your options are, and we'll randomly choose one.</p>
                     </div>
                 </div>
             
-            
+            {/* Start CTA below */}
             <section className="section has-text-centered">
                 <h1 className="title">Ready to test your LUC?</h1>
                     <a className="button is-large is-warning is-hovered" 
@@ -53,7 +58,6 @@ const HomeBody = props => {
                     }}>Get Started</a>
             </section>
         
-        </div>
  </section>
             
      );

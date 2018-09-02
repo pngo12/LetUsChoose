@@ -47,6 +47,10 @@ class InputForm extends Component {
         this.toggleHidden()
     }
 
+    delayResult = () => {
+        
+    }
+
     Redraw = () => {
             this.setState({
             chosenEthn: 'No Preference',

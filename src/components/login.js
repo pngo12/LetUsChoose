@@ -3,7 +3,7 @@ import loginData from './logindata'
 // import ForgotPassword from './components/recover'
 
 const INPUT_PAGE = "INPUT_PAGE"
-const FORGOT_PASSWORD = 'FORGOT_PASSWORD'
+// const FORGOT_PASSWORD = 'FORGOT_PASSWORD'
 
 class Login extends Component {
     state = { 
