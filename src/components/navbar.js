@@ -10,7 +10,7 @@ class Navbar extends Component {
     toggleOn: false
   }
 
-  toggleOpen = e => {
+  toggleOpen = () => {
     this.setState({ toggleOn: !this.state.toggleOn })
   }
 

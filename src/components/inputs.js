@@ -42,23 +42,15 @@ class InputForm extends Component {
         })
     }
 
-    randomAll = () => {
-        const random = Data.filter(x => x.ethnicity !== 'No Preference')
-        const randomIndex = Math.floor(Math.random() * random.length)
-        this.setState({
-            randomChoice: random[randomIndex]
-        })
-    }
-
     dualOnClick = () => {
         this.randomize()
         this.toggleHidden()
     }
 
-    redraw = () => {
-        this.setState({
-            chosenEthn: '',
-            chosenGn: '',
+    Redraw = () => {
+            this.setState({
+            chosenEthn: 'No Preference',
+            chosenGn: 'No Preference',
             isHidden: true
         })
     }
@@ -94,11 +86,11 @@ class InputForm extends Component {
                         <button className="button is-link is-medium" onClick={this.dualOnClick}>Randomize!</button>
                     </div>
                 </form>
-                </div>
-                {/* The below will render the random restaurant */}
+            </div>
                 <div className="column is-1"></div>
             <div className="column is-6">
-                {/* This hides the result until random button is clicked */}
+                {/* The below will render the random restaurant && */}
+                {/*  hides the result until random button is clicked */}
                 {
                     !this.state.isHidden && <RenderOption 
                     randomChoice={this.state.randomChoice} 
@@ -107,7 +99,6 @@ class InputForm extends Component {
                 </div>
             </div>
     </section>
-
          );
     }
 }

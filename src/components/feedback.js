@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom'
+import Modal from 'react-responsive-modal'
 const HOME_PAGE = 'HOME_PAGE'
 
 class Feedback extends Component {
@@ -7,11 +9,16 @@ class Feedback extends Component {
         email: "",
         subject: "",
         message: "",
+        open: false,
     }
     
-    thankYouAlert = () => {
-     alert("Thank you for your feedback! We will address this shortly!");
-    }    
+    onOpenModal = () => {
+        this.setState({ open: true})
+    }
+
+    onCloseModal = () => {
+        this.setState({open:false})
+    }
 
     onChange = e => {
         this.setState({
@@ -19,18 +26,37 @@ class Feedback extends Component {
         })
     }
     
-      formSubmit = e => {
-          e.preventDefault();
-          this.props.addtoFeedback(this.state);
-          this.thankYouAlert();
-          this.setState({
-              name: "",
-              email: "",
-              subject: "",
-              message: ""
-          })
-      }
+    formSubmit = e => {
+        e.preventDefault();
+        this.props.addtoFeedback(this.state);
+        this.onOpenModal();
+        this.setState({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+    })
+}
+    
+    
+    //     formSubmit = e => {
+    //       if (this.state.name === '' || this.state.email === '' || this.state.subject === '' || this.state.message === ''){
+    //         console.log('tell them to fill the forms.')
+    //       } else 
+          
+    //       e.preventDefault();
+    //       this.props.addtoFeedback(this.state);
+    //       this.onOpenModal();
+    //       this.setState({
+    //           name: "",
+    //           email: "",
+    //           subject: "",
+    //           message: "",
+    //   })
+    // }
+
     render() {
+        const { open } = this.state;
     return (
         <section className="section is-medium" id="is-medium">
         <h1 className ="title-page"> We value your input! </h1>
@@ -76,6 +102,13 @@ class Feedback extends Component {
                     <button className="button is-danger"onClick={() => {this.props.changePage(HOME_PAGE)}}> Cancel </button>
                 </div>
             </div>
+            </div>
+            <div>
+                <Modal open={open} onClose={this.onCloseModal} center >
+                    <br />
+                    <h1 className="title is-4">Thanks for your feedback!</h1>
+                        <p className="content">We'll address your concerns shortly.</p>
+                </Modal>
             </div>
             </form>
         </div>

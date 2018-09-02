@@ -13,11 +13,17 @@ const RenderOption = props => {
                 <div className="media">
                     <div className="media-left">
                         <div className="media-content">
-                            <p className="subtitle is-6 has-text-weight-bold">The attire is: {props.randomChoice.attire}</p>
-                            <p className="subtitle is-6 has-text-weight-bold">Is alcohol served? {props.randomChoice.alcohol}</p>
-                            <p className="subtitle is-6 has-text-weight-bold">Does this restaurant have takeout?: {props.randomChoice.takeOut}</p>
-                            <p className="subtitle is-6 has-text-weight-bold">This restaurants is: {props.randomChoice.budget}</p>
-                            <button className="button is-danger is-normal" onClick={props.redraw}>Not Happy? Redraw!</button>
+                            <table className="table">
+                                <tbody>
+                                    <tr>
+                                        <td><p className="subtitle is-6 has-text-weight-bold">The attire is: {props.randomChoice.attire}</p></td>
+                                        <td><p className="subtitle is-6 has-text-weight-bold">Is alcohol served? {props.randomChoice.alcohol}</p></td>
+                                        <td><p className="subtitle is-6 has-text-weight-bold">Takeout available? {props.randomChoice.takeOut}</p></td>
+                                        <td><p className="subtitle is-6 has-text-weight-bold">This restaurant is: {props.randomChoice.budget}</p></td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+                            <button className="button is-danger is-normal">Not Happy? Redraw!</button>
                         </div>
                     </div>
                 </div>
@@ -25,5 +31,5 @@ const RenderOption = props => {
         </div>
      )
 }
- 
+
 export default RenderOption;
