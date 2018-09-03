@@ -9,7 +9,6 @@ $blue: rgb(40,77,102);
 $light-blue: rgb(245,248,251);
 $dark : rgb(28,39,43);
 $title-color: $light-blue;
-
 $grey-light: $orange;
 $grey-dark: $purple;
 $grey: $blue;
@@ -29,8 +28,14 @@ $primary: $dark;
     font-weight: 400;
 }
 #is-medium {
-    margin-top: -145px;
-}
+    margin-top: -7em;
+    padding-top: 95px;
+    margin-bottom: -2em;}
+
+        @media screen and (max-width: 768px) {
+          margin-top: -5em;
+        }
+      
 .aboutMe {
     height: 150px;
     width: 150px;
