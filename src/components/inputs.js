@@ -9,7 +9,8 @@ class InputForm extends Component {
         ethnicity: ['No Preference', "Italian", 'Japanese', 'Brazilian', 'American', 'Hawaiian', 'Chinese', 'Vietnamese', 'Greek'],
         genre: ['No Preference', 'Pizza', 'Barbecue', 'Poke', 'Dim Sum', 'Soup/Noodles','Mediterranean', 'Tacos', 'Sandwiches', 'Gyros', 'Kebabs', 'Seafood', 'Rice/Noodles', 'Burgers', 'Breakfast/Brunch'],
         randomChoice: '',
-        isHidden: true
+        isHidden: true,
+        hasSeenOption: false
     }
 
     formSubmit = e => {
@@ -39,16 +40,13 @@ class InputForm extends Component {
         const randomizeOptions = Math.floor(Math.random() * randomOptions.length)
         this.setState({
             randomChoice: randomOptions[randomizeOptions],
+            hasSeenOption: true,
         })
     }
 
     dualOnClick = () => {
         this.randomize()
         this.toggleHidden()
-    }
-
-    delayResult = () => {
-        
     }
 
     Redraw = () => {
@@ -95,11 +93,14 @@ class InputForm extends Component {
             <div className="column is-6">
                 {/* The below will render the random restaurant && */}
                 {/*  hides the result until random button is clicked */}
+                
                 {
                     !this.state.isHidden && <RenderOption 
                     randomChoice={this.state.randomChoice} 
                     />
+
                 }
+
                 </div>
             </div>
     </section>
