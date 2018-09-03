@@ -11,7 +11,7 @@ const HomeBody = props => {
                 <div className="container">
                     <div className="columns has-text-centered">
                         <div className="column is-three-fifths is-offset-one-fifth">
-                        <h1 className="title has-text-centered">What's LUC?</h1>
+                        <h1 className="title has-text-centered" id="black">What's LUC?</h1>
                             <p className="content">
                                 If you've ever felt plagued by too many options, then LUC (Let us Choose) aims to solve that problem. Instead of spending hours on figuring out what to eat, where to eat, or<br/> what to do,
                             let LUC decide for you. You'll discover new restaurants, new things to do, and best of all, you'll no struggle to answer the age old question of: <strong>What do you want to eat?</strong>
