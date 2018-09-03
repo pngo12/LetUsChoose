@@ -26,8 +26,14 @@ $grey: $blue;
     font-weight: 400;
 }
 #is-medium {
-    margin-top: -145px;
-}
+    margin-top: -7em;
+    padding-top: 95px;
+    margin-bottom: -2em;}
+
+        @media screen and (max-width: 768px) {
+          margin-top: -5em;
+        }
+      
 .aboutMe {
     height: 150px;
     width: 150px;
