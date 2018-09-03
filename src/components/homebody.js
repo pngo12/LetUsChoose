@@ -1,8 +1,5 @@
 import React from 'react';
 import HomeBanner from './homebanner'
-import shocked from '../images/shocked.png';
-import manNo from '../images/manNo.png';
-import girlNo from '../images/girlNo.png';
 const SIGNUP_PAGE = 'SIGNUP_PAGE'
 
 const HomeBody = props => {
@@ -23,31 +20,6 @@ const HomeBody = props => {
                 {/* Start full width below */}
 
             <HomeBanner />
-                    {/* <section className="section is-small"></section>
-                    <div className="columns">
-                        <div className="column is-5">
-                            <figure className="image is-128x128"><img src={shocked} /></figure>
-                            <h1 className='is-pulled-left title'>Options got your head exploding?</h1><br/>
-                            <p className="content is-pulled-left">Don't worry, we know that feeling.
-                            5000 channels yet there's "nothing" to watch. Too many options leave you overwhelemd.
-                            So let us do the choosing, and you do the eating.</p>
-                        </div>
-                        <div className="column is-7"></div>
-                    </div>
-                <div className="columns">
-                    <div className="column is-7"></div>
-                        <div className="column is-5">
-                            <div className="columns">
-                                <div className="column">
-                                    <figure className="image is-128x128 is-inline-block is-pulled-right"><img src={manNo} /></figure>
-                                        <figure className="image is-128x128 is-pulled-right"><img src={girlNo} /></figure>
-                                    </div>
-                                </div>
-                            <h1 className='is-pulled-right title'>Indecisive group?</h1><br />
-                        <p className="content is-pulled-right">If your group of friends are the indecisive type then we're the solution type.
-                        LUC isn't just for your boo, it's for the homies too. Let us know what your options are, and we'll randomly choose one.</p>
-                    </div>
-                </div>
             
             {/* Start CTA below */}
             <section className="section has-text-centered">
