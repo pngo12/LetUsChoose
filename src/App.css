@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+#dark {
+  color: #0000; }
+
 .title-page {
   font-size: 75px;
   text-align: center;
@@ -715,7 +718,7 @@
       padding: 18rem 1.5rem; } }
 
 .footer {
-  background-color: #fafafa;
+  background-color: #283e4e;
   padding: 3rem 1.5rem 6rem; }
 
 /*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
