@@ -16,7 +16,7 @@ const HomeBanner = () => {
                     <h1 className="title title-color">Options got your head exploding?</h1>
                     <p className="content is-pulled-left has-text-white">
                         Don't worry, we know that feeling. 5000 channels yet "nothing" to watch. Too
-                                many options leave you overwhelemd. We do the choosing, and you do the eating.</p>
+                        many options leave you overwhelmed. We do the choosing, and you do the eating.</p>
                 
                 </div>
             </div>

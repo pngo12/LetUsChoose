@@ -35,10 +35,13 @@
   height: 150px;
   width: 150px;
   border-radius: 50%; }
+  @media screen and (max-width: 768px) {
+    .aboutMe {
+      width: 100% auto; } }
 
-.about {
-  padding: 10px;
-}
+@media screen and (max-width: 758px) {
+  #aboutSection {
+    align-items: center !important; } }
 
 #biggest-container {
   margin-top: -160px; }

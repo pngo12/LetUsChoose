@@ -44,12 +44,12 @@ class InputForm extends Component {
         })
         this.toggleHidden()
     }
-
+    
     dualOnClick = () => {
         this.randomize()
         this.toggleHidden()
     }
-
+    // Below resets the input and hides the result
     Redraw = () => {
             this.setState({
             chosenEthn: 'No Preference',
@@ -77,10 +77,10 @@ class InputForm extends Component {
             </div>
                 <div className="field">
                     <label className="label is-size-5">What Genre?</label>
-                    <div className="control">
-                        <div className="select">
-                        <select value={this.state.chosenGn} onChange={e => {this.setState({chosenGn: e.target.value})}}>
-                        {this.state.genre.map(x => <option key={x} value={x}> {x}</option>)}
+                        <div className="control">
+                            <div className="select">
+                                <select value={this.state.chosenGn} onChange={e => {this.setState({chosenGn: e.target.value})}}>
+                                    {this.state.genre.map(x => <option key={x} value={x}> {x}</option>)}
                         </select>
                     </div>
                 </div>
@@ -100,7 +100,6 @@ class InputForm extends Component {
                     randomChoice={this.state.randomChoice} 
                     Redraw={this.Redraw}
                     />
-
                 }
 
                 </div>

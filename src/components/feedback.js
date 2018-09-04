@@ -78,11 +78,11 @@ class Feedback extends Component {
 
             <div className = "field is-grouped">
                 <div className="control">
-                    <button type="submit" className="button is-primary"> Submit</button>
+                    <button type="submit" className="button is-info"> Submit</button>
                     
                 </div>
                 <div className="control">
-                    <button className="button is-danger"onClick={() => {this.props.changePage(HOME_PAGE)}}> Cancel </button>
+                    <button className="button is-primary"onClick={() => {this.props.changePage(HOME_PAGE)}}> Cancel </button>
                 </div>
             </div>
             </div>

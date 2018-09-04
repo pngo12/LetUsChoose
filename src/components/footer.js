@@ -17,9 +17,6 @@ const Footer = props => {
             <div className="row has-text-centered has-text-white">
             <h2>2850 Red Hill Ave Santa Ana, CA 92705</h2>
             </div>
-            <div className="row has-text-centered has-text-white">
-            <h2>714-555-5555</h2>
-            </div>
         </footer>
     );
 }

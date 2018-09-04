@@ -12,7 +12,7 @@ const About = () => {
             <div className="container about">
                 <div className="columns">
                     <div className="column">
-                        <p className="title"><strong>About LUC</strong></p>
+                        <p className="title" id="dark-title"><strong>About LUC</strong></p>
                     </div>
                 </div>
                 <div className="columns">
@@ -21,22 +21,19 @@ const About = () => {
                             Are you tired of your boo asking you where to eat? Tired of them taking hours just
                             to choose a restaurant? Well, LUC aims to solve that problem. Just let us know a few things about
                             your cravings, and we'll give you a random restauarnt based on your criteria. Now instead of taking
-                    hours to choose, you'll have a palce to go within minutes. </p>
+                            hours to choose, you'll have a place to go within minutes. </p>
                     </div>
                     <div className="column"></div>
                 </div>
                 <div id="makers" clas="columns">
-                    <p><strong>Meet the makers of LUC</strong></p>
+                    <p className="subtitle" id="dark-title"><strong>Meet the makers of LUC</strong></p>
                 </div>
-                <div className="row">
-                    <div className="column circle"> <div className="circle"></div></div>
-                    <div className="column circle"> <div className="circle"></div></div>
-                    <div className="column circle"> <div className="circle"></div></div>
-                </div> <br />
                 <div className="columns">
-                    <div className="column"><figure> <img className="aboutMe" src={phillip} alt="one of the makers of this site."/></figure>Phillip Ngo</div>
-                    <div className="column"><figure> <img className="aboutMe" src={kevin} alt="one of the makers of this site."/></figure>Kevin Moon</div>
-                    <div className="column"><figure> <img className="aboutMe" src={john} alt="one of the makers of this site."/></figure>John Park</div>
+                </div> <br />
+                <div className="columns" id="aboutSection">
+                    <div className="column has-text-centered"><figure> <img className="aboutMe" src={phillip} alt="one of the makers of this site."/></figure>Phillip Ngo</div>
+                    <div className="column has-text-centered"><figure> <img className="aboutMe" src={kevin} alt="one of the makers of this site."/></figure>Kevin Moon</div>
+                    <div className="column has-text-centered"><figure> <img className="aboutMe" src={john} alt="one of the makers of this site."/></figure>John Park</div>
                 </div>
             </div>
             </section>
