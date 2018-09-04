@@ -45,9 +45,9 @@ class Navbar extends Component {
               <a className="navbar-item" onClick={() => {
                 this.props.changePage(FEEDBACK_PAGE)
               }} >Give Us Feedback</a>
-              <a className="navbar-item" onClick={() => {
-                this.props.changePage(SIGNUP_PAGE)
-              }}>Login/Signup</a>
+              <button id="navbutton" className="button is-info"><a className="has-text-white" onClick={() => {
+                  this.props.changePage(SIGNUP_PAGE)
+                }}>Login/Signup</a></button>
             </div>
           </div>
         </div>
