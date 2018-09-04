@@ -718,7 +718,7 @@ const Data = [
         {
         name: 'Apola Gyro Grill',
         ethnicity: 'Greek',
-        genre: 'Mediterranean',
+        genre: 'Gyros',
         budget: '$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -729,7 +729,7 @@ const Data = [
         {
         name: 'Christakis Greek Cuisine',
         ethnicity: 'Greek',
-        genre: 'Mediterranean',
+        genre: 'Kebabs',
         budget: '$$',
         alcohol: 'yes',
         attire: 'Casual',
@@ -740,7 +740,7 @@ const Data = [
         {
         name: 'Luna Grill Westpark',
         ethnicity: 'Greek',
-        genre: 'Mediterranean',                
+        genre: 'Gyros',                
         budget: '$$',                
         alcohol: 'yes',               
         attire: 'Casual',                              
@@ -751,7 +751,7 @@ const Data = [
         {
         name: 'Chef Ekrem\'s Mediterranean Grill',
         ethnicity: 'Greek',                
-        genre: 'Mediterranean',                
+        genre: 'Kebabs',                
         budget: '$',                
         alcohol: 'yes',                
         attire: 'Casual',                
@@ -762,7 +762,7 @@ const Data = [
         {
         name: 'Greek Bistro',
         ethnicity: 'Greek',
-        genre: 'Mediterranean',
+        genre: 'Gyros',
         budget: '$$',
         alcohol: 'yes',
         attire: 'Casual',

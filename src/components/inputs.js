@@ -6,8 +6,8 @@ class InputForm extends Component {
     state = {
         chosenEthn: 'No Preference',
         chosenGn: 'No Preference',
-        ethnicity: ['No Preference', "Italian", 'Japanese', 'Brazilian', 'American', 'Hawaiian', 'Chinese', 'Vietnamese', 'Greek'],
-        genre: ['No Preference', 'Pizza', 'Barbecue', 'Poke', 'Dim Sum', 'Soup/Noodles','Mediterranean', 'Tacos', 'Sandwiches', 'Gyros', 'Kebabs', 'Seafood', 'Rice/Noodles', 'Burgers', 'Breakfast/Brunch'],
+        ethnicity: ['No Preference', "Italian", 'Japanese', 'Brazilian', 'American', 'Hawaiian', 'Chinese', 'Vietnamese', 'Greek', 'Korean', 'Mexican', 'Thai'],
+        genre: ['No Preference', 'Pizza', 'Barbecue', 'Poke', 'Dim Sum', 'Soup/Noodles', 'Tacos', 'Sandwiches', 'Gyros', 'Kebabs', 'Seafood', 'Rice/Noodles', 'Burgers', 'Breakfast/Brunch'],
         randomChoice: '',
         isHidden: true,
         hasSeenOption: false
