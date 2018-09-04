@@ -39,15 +39,19 @@ class Navbar extends Component {
             <div className="navbar-end">
               <a className="navbar-item" onClick={() => {
                 this.props.changePage(HOME_PAGE)
+                this.toggleOpen()
               }} >Home</a>
               <a className="navbar-item" onClick={() => {
                 this.props.changePage(ABOUT_PAGE)
+                this.toggleOpen()
               }} >About</a>
               <a className="navbar-item" onClick={() => {
                 this.props.changePage(FEEDBACK_PAGE)
+                this.toggleOpen()
               }} >Give Us Feedback</a>
               <button id="navbutton" className="button is-info"><a className="has-text-white" onClick={() => {
                   this.props.changePage(SIGNUP_PAGE)
+                  this.toggleOpen()
                 }}>Login/Signup</a></button>
             </div>
           </div>
