@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 
 const RenderOption = props => {
     return ( 
         <div className="card is-pulled-left has-text-centered">
-            <p className="title is-3">We chose {props.randomChoice.name} for you</p>
+            <p className="title is-3" id="dark-title">We chose {props.randomChoice.name} for you</p>
             <div className="card-image">
                 <figure className="image" id="size">
                     <a href={props.randomChoice.link} target= "_blank"><img src={props.randomChoice.photo} alt="a rendering of the random option" /></a>
@@ -23,7 +24,7 @@ const RenderOption = props => {
                                     </tr>
                                 </tbody>
                             </table> 
-                            <button className="button is-danger is-normal">Not Happy? Redraw!</button>
+                            <button onClick={props.Redraw} className="button is-info is-normal">Not Happy? Redraw!</button>
                         </div>
                     </div>
                 </div>
