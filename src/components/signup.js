@@ -31,7 +31,7 @@ class Signup extends Component {
     render() {
         return (
             <div className="container">
-                <section className="section is-large">
+                <section className="section is-large" id="container-spacing-format">
                         <div className="columns is-centered">
                             <div className="column is-half">
                                 <h1 className="title text-centered">Let's get you signed up</h1>
