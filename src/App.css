@@ -36,6 +36,10 @@
   width: 150px;
   border-radius: 50%; }
 
+.about {
+  padding: 10px;
+}
+
 #biggest-container {
   margin-top: -160px; }
 
