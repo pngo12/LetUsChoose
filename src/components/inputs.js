@@ -19,7 +19,7 @@ class InputForm extends Component {
     
     toggleHidden = () => {
         this.setState({
-            isHidden: false
+            isHidden: !true
         })
     }
     
@@ -42,6 +42,7 @@ class InputForm extends Component {
             randomChoice: randomOptions[randomizeOptions],
             hasSeenOption: true,
         })
+        this.toggleHidden()
     }
 
     dualOnClick = () => {
@@ -85,7 +86,7 @@ class InputForm extends Component {
                 </div>
             </div>
                     <div className="control">
-                        <button className="button is-link is-medium" onClick={this.dualOnClick}>Randomize!</button>
+                        <button className="button is-info is-medium" onClick={this.dualOnClick}>Randomize!</button>
                     </div>
                 </form>
             </div>
@@ -97,6 +98,7 @@ class InputForm extends Component {
                 {
                     !this.state.isHidden && <RenderOption 
                     randomChoice={this.state.randomChoice} 
+                    Redraw={this.Redraw}
                     />
 
                 }

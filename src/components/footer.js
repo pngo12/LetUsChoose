@@ -9,7 +9,7 @@ const Footer = props => {
                 <div className="row">
                     <p className="content has-text-white">
                     ©LUC is built by Kevin Moon, John Park, and Phillip Ngo. This is an open source project.
-            Please feel free to <a href="https://github.com/pngo12/youpick.git">contribute here</a>, or send us feedback <a
+            Please feel free to <a className="has-text-white" href="https://github.com/pngo12/youpick.git">contribute here</a>, or send us feedback <a className="has-text-white"
             onClick={() => {props.changePage(FEEDBACK_PAGE)}}>here.</a>
                     </p>
                 </div>

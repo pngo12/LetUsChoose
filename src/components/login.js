@@ -20,7 +20,7 @@ class Login extends Component {
      }
     
     loginCondition = () => {
-        let validateCredentials = loginData.find(x => x.username === this.state.username && x.password === this.state.password) ? true : false
+        let validateCredentials = loginData.filter(x => x.username === this.state.username && x.password === this.state.password) ? true : false
         if (validateCredentials === true ){
             this.props.changePage(INPUT_PAGE)
             this.setState({isLoggedIn: true})

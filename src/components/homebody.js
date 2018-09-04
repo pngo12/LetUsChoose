@@ -17,7 +17,6 @@ const HomeBody = props => {
                         props.changePage(SIGNUP_PAGE)
                     }}>Get Started</a>
             </section>
-            <div class="pageloader"><span class="title">Pageloader</span></div>
  </section>
             
      );

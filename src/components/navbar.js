@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import logo from '../images/logo.png'
 
 const HOME_PAGE = 'HOME_PAGE'
 const ABOUT_PAGE = 'ABOUT_PAGE'
@@ -27,7 +28,7 @@ class Navbar extends Component {
             <a className="navbar-item" onClick={() => {
               this.props.changePage(HOME_PAGE)
             }}>
-              <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo" /> </a>
+              <img src={logo} alt="Logo" /> </a>
             <span className="navbar-burger burger" data-target="navbarMenuHeroA" onClick={this.toggleOpen}>
               <span></span>
               <span></span>

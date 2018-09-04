@@ -6,7 +6,10 @@
   background-color: #24343a; }
 
 #navbutton {
-  margin-top: 1%; }
+  margin-top: 2%; }
+
+#banner {
+  height: 350px; }
 
 .title-page {
   font-size: 75px;

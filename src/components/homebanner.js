@@ -6,12 +6,12 @@ import food from '../images/food.png'
 const HomeBanner = () => {
     return ( 
         <div className="columns is-gapless">
-            <div className="column is-4 has-background-grey is-narrow">
+            <div className="column is-4 has-background-grey is-narrow" id="banner">
                 
                 <div className="container is-fluid">
                     <br />
                     <figure className="image is-128x128">
-                        <img src={shocked} />
+                        <img src={shocked} alt="an emoji with his head exploding"/> 
                     </figure>
                     <h1 className="title title-color">Options got your head exploding?</h1>
                     <p className="content is-pulled-left has-text-white">
@@ -20,12 +20,12 @@ const HomeBanner = () => {
                 
                 </div>
             </div>
-            <div className="column is-4 has-background-grey-dark is-narrow">
+            <div className="column is-4 has-background-grey-dark is-narrow" id="banner">
                 
                 <div className="container is-fluid">
                     <br />
                     <figure className="image is-128x128">
-                        <img src={thinking} />
+                        <img src={thinking} alt="an emoji thinking about his options"/>
                     </figure>
 
                     <h1 className="title">Indecisive group?</h1>
@@ -34,12 +34,12 @@ const HomeBanner = () => {
                 </div>
             </div>
 
-            <div className="column is-4 has-background-grey-light is-narrow">
+            <div className="column is-4 has-background-grey-light is-narrow" id="banner">
 
                 <div className="container is-fluid">
                     <br />
                     <figure className="image is-128x128">
-                        <img src={food} />
+                        <img src={food} alt="an emoji of a pan of food, it closely resembles paella"/>
                     </figure>
                     <h1 className="title">Not Just Food.</h1>
                     <p className="content is-pulled-left has-text-white">LUC is more than just food. If you're looking for something to do, rest assured, we'll help you decide.</p>
