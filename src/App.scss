@@ -3,14 +3,172 @@
 
 $family-sans-serif: "Nunito", sans-serif;
 
+//Our colors
 $orange: rgb(255,107,54);
 $purple: rgb(73,62,94);
 $blue: rgb(40,77,102);
 $light-blue: rgb(245,248,251);
+$dark : rgb(28,39,43);
+$indigo: rgb(40,62,78);
 
+//Modified colors
+$title-color: $light-blue;
 $grey-light: $orange;
 $grey-dark: $purple;
 $grey: $blue;
+$primary: $dark;
+$is-link: $orange;
+$footer-background-color:$indigo;
+
+#dark-title{
+    color: $dark;
+}
+
+//John set variables or whatever you need below this line
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//End John's section
+//Kevin set variables or whatever CSS you need below this line
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//End Kevin's section
+//Phillip's section
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//End Phillip's section
+
+
 
 
 .title-page {
@@ -26,8 +184,14 @@ $grey: $blue;
     font-weight: 400;
 }
 #is-medium {
-    margin-top: -145px;
-}
+    margin-top: -7em;
+    padding-top: 95px;
+    margin-bottom: -2em;}
+
+        @media screen and (max-width: 768px) {
+          margin-top: -5em;
+        }
+      
 .aboutMe {
     height: 150px;
     width: 150px;

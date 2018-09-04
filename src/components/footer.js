@@ -7,7 +7,7 @@ const Footer = props => {
         <footer className="footer is-info">
             <div className="content has-text-centered">
                 <div className="row">
-                    <p>
+                    <p className="content">
                     © <strong>LUC</strong> is built by Kevin Moon, John Park, and Phillip Ngo. This is an open source project.
             Please feel free to <a href="https://github.com/pngo12/youpick.git">contribute here</a>, or send us feedback <a
             onClick={() => {

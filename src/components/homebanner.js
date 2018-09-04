@@ -13,7 +13,7 @@ const HomeBanner = () => {
                     <figure className="image is-128x128">
                         <img src={shocked} />
                     </figure>
-                    <h1 className="title">Options got your head exploding?</h1>
+                    <h1 className="title title-color">Options got your head exploding?</h1>
                     <p className="content is-pulled-left has-text-white">
                         Don't worry, we know that feeling. 5000 channels yet "nothing" to watch. Too
                                 many options leave you overwhelemd. We do the choosing, and you do the eating.</p>
