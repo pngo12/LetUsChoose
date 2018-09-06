@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom'
 import Modal from 'react-responsive-modal'
-const HOME_PAGE = 'HOME_PAGE'
+import {NavLink} from 'react-router-dom'
 
 class Feedback extends Component {
     state = {
@@ -82,7 +81,7 @@ class Feedback extends Component {
                     
                 </div>
                 <div className="control">
-                    <button className="button is-primary"onClick={() => {this.props.changePage(HOME_PAGE)}}> Cancel </button>
+                    <NavLink to='/'><button className="button is-primary">Cancel</button></NavLink>
                 </div>
             </div>
             </div>

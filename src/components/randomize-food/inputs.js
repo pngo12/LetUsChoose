@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Data from './data'
-import RenderOption from './renderoption.js'
+import Data from '../data'
+import RenderOption from './renderoption'
 
 class InputForm extends Component {  
     state = {
@@ -44,7 +44,7 @@ class InputForm extends Component {
         })
         this.toggleHidden()
     }
-    
+
     dualOnClick = () => {
         this.randomize()
         this.toggleHidden()
@@ -94,14 +94,12 @@ class InputForm extends Component {
             <div className="column is-6">
                 {/* The below will render the random restaurant && */}
                 {/*  hides the result until random button is clicked */}
-                
                 {
                     !this.state.isHidden && <RenderOption 
                     randomChoice={this.state.randomChoice} 
                     Redraw={this.Redraw}
                     />
                 }
-
                 </div>
             </div>
     </section>

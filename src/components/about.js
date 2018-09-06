@@ -7,7 +7,7 @@ const About = () => {
     return ( 
             <section className="section is-small">
             <div className="container">
-                <img src='https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&h=350' />
+                <img src='https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&h=350' alt="a building"/>
                 </div>
             <div className="container about">
                 <div className="columns">
@@ -30,7 +30,7 @@ const About = () => {
                 </div>
                 <div className="columns">
                 </div> <br />
-                <div className="columns" id="aboutSection">
+                <div className="columns">
                     <div className="column has-text-centered"><figure> <img className="aboutMe" src={phillip} alt="one of the makers of this site."/></figure>Phillip Ngo</div>
                     <div className="column has-text-centered"><figure> <img className="aboutMe" src={kevin} alt="one of the makers of this site."/></figure>Kevin Moon</div>
                     <div className="column has-text-centered"><figure> <img className="aboutMe" src={john} alt="one of the makers of this site."/></figure>John Park</div>

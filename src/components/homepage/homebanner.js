@@ -1,7 +1,7 @@
 import React from 'react';
-import shocked from '../images/shocked.png';
-import thinking from '../images/thinking.png';
-import food from '../images/food.png'
+import thinking from './images/thinking.png';
+import food from './images/food.png'
+import shocked from './images/shocked.png'
 
 const HomeBanner = () => {
     return ( 

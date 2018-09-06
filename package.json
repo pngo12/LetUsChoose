@@ -1,7 +1,7 @@
 {
   "name": "food-generator",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "bulma": "^0.7.1",
     "bulma-extensions": "^2.2.2",
@@ -10,6 +10,7 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-responsive-modal": "^3.3.0",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5"
   },
   "scripts": {

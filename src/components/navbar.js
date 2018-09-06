@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../images/logo.png'
-
-const HOME_PAGE = 'HOME_PAGE'
-const ABOUT_PAGE = 'ABOUT_PAGE'
-const FEEDBACK_PAGE = 'FEEDBACK_PAGE'
-const SIGNUP_PAGE = 'SIGNUP_PAGE'
+import { NavLink } from 'react-router-dom'
 
 class Navbar extends Component {
   state = {
@@ -25,10 +21,7 @@ class Navbar extends Component {
       <nav className="navbar is-primary">
         <div className="container">
           <div className="navbar-brand">
-            <a className="navbar-item" onClick={() => {
-              this.props.changePage(HOME_PAGE)
-            }}>
-              <img src={logo} alt="Logo" /> </a>
+            <NavLink className="navbar-item" to='/'><img src={logo} alt="Logo" /></NavLink>
             <span className="navbar-burger burger" data-target="navbarMenuHeroA" onClick={this.toggleOpen}>
               <span></span>
               <span></span>
@@ -37,22 +30,10 @@ class Navbar extends Component {
           </div>
           <div id="navbarMenuHeroA" className={burgerClass.join(' ')}>
             <div className="navbar-end">
-              <a className="navbar-item" onClick={() => {
-                this.props.changePage(HOME_PAGE)
-                this.toggleOpen()
-              }} >Home</a>
-              <a className="navbar-item" onClick={() => {
-                this.props.changePage(ABOUT_PAGE)
-                this.toggleOpen()
-              }} >About</a>
-              <a className="navbar-item" onClick={() => {
-                this.props.changePage(FEEDBACK_PAGE)
-                this.toggleOpen()
-              }} >Give Us Feedback</a>
-              <button id="navbutton" className="button is-info"><a className="has-text-white" onClick={() => {
-                  this.props.changePage(SIGNUP_PAGE)
-                  this.toggleOpen()
-                }}>Login/Signup</a></button>
+              <NavLink className="navbar-item" to='/'>Home</NavLink>
+              <NavLink className="navbar-item" to='/about'>About</NavLink>
+              <NavLink className="navbar-item" to='/feedback'>Give us Feedback</NavLink>
+              <NavLink to='/signup' id="navbutton" className="button has-text-white is-info">Signup</NavLink>
             </div>
           </div>
         </div>
@@ -60,7 +41,5 @@ class Navbar extends Component {
     );
   }
 }
-
-
 
 export default Navbar;

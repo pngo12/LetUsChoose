@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
-const LOGIN_PAGE = "LOGIN_PAGE"
-const INPUT_PAGE = "INPUT_PAGE"
+import {NavLink, Redirect} from 'react-router-dom'
 
 class Signup extends Component {
     state = { 
@@ -19,13 +17,13 @@ class Signup extends Component {
 
     formSubmit = e => {
         e.preventDefault()
-        this.props.changePage(INPUT_PAGE)
+        return <Redirect to='/food' />
     }
 
     success = (e) => {
                 e.preventDefault()
-                this.props.changePage(INPUT_PAGE)
                 this.setState({isSignedUp: true})
+                return <Redirect to ='/food' />
     } 
 
     render() {
@@ -58,9 +56,9 @@ class Signup extends Component {
                             </div>
                             <button className="button is-info">Sign up!</button>
                             
-                </form><br />
-                    <p>Already a user? <a onClick={() => {
-                        this.props.changePage(LOGIN_PAGE)}}>Login here.</a></p>
+                        </form><br />
+                        
+                            <p>Already a user? <NavLink to='/login'>Login Here.</NavLink></p>
                     </div>
                 </div>
             </div>

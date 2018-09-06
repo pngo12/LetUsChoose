@@ -1,16 +1,14 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom'
 
-const FEEDBACK_PAGE = 'FEEDBACK_PAGE'
-
-const Footer = props => {
+const Footer = () => {
     return (
         <footer className="footer is-info">
             <div className="content has-text-centered">
                 <div className="row">
                     <p className="content has-text-white">
                     ©LUC is built by Kevin Moon, John Park, and Phillip Ngo. This is an open source project.
-            Please feel free to <a className="has-text-white" href="https://github.com/pngo12/youpick.git">contribute here</a>, or send us feedback <a className="has-text-white"
-            onClick={() => {props.changePage(FEEDBACK_PAGE)}}>here.</a>
+            Please feel free to <a className="has-text-white" href="https://github.com/pngo12/youpick.git">contribute here</a>, or send us feedback <NavLink className="has-text-white" to='/feedback'>here.</NavLink>
                     </p>
                 </div>
             </div>

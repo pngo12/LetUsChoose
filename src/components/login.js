@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
+import {Redirect} from 'react-router-dom'
 import loginData from './logindata'
-// import ForgotPassword from './components/recover'
-
-const INPUT_PAGE = "INPUT_PAGE"
-// const FORGOT_PASSWORD = 'FORGOT_PASSWORD'
 
 class Login extends Component {
     state = { 
-        isLoggedIn: false,
+        success: false,
         open:false,
         username: '',
-        password: ''
+        password: '',
+        redirect: false
      }
 
      onChange = e => {
@@ -19,15 +17,19 @@ class Login extends Component {
          })
      }
     
-    loginCondition = () => {
+    loginCondition = e => {
+        e.preventDefault()
         let validateCredentials = loginData.filter(x => x.username === this.state.username && x.password === this.state.password) ? true : false
-        if (validateCredentials === true ){
-            this.props.changePage(INPUT_PAGE)
-            this.setState({isLoggedIn: true})
-        }  else console.log('wrong username')
+        if (validateCredentials === true){
+            this.setState({success:true})
+        }
+
     }
 
     render() { 
+        if(this.state.success === true){
+            <Redirect to='/food' />
+        }
         return ( 
             <section className="section is-large" id="loginSection">
                 <div className="container">
