@@ -11,7 +11,6 @@ import Login from './components/login'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 class App extends Component {
-
   state = {
     feedBack: []
   }
@@ -26,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <BrowserRouter>
+        
           <div>
             <Navbar />
               <Switch>
@@ -38,7 +37,7 @@ class App extends Component {
                 <Route path='/signup' component={Signup} />
               </Switch>
           </div>
-        </BrowserRouter>
+        
       <Footer />
     </div >
     );

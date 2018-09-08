@@ -12,14 +12,12 @@ class Login extends Component {
      }
 
      onChange = e => {
-         this.setState({
-             [e.target.name]: e.target.value
-         })
-     }
+         this.setState({[e.target.name]: e.target.value})}
     
     loginCondition = e => {
         e.preventDefault()
-        let validateCredentials = loginData.filter(x => x.username === this.state.username && x.password === this.state.password) ? true : false
+        let validateCredentials = loginData.filter(x => x.username === this.state.username && x.password === this.state.password).length > 0;
+        console.log(validateCredentials);
         if (validateCredentials === true){
             this.setState({success:true})
         }
@@ -28,7 +26,7 @@ class Login extends Component {
 
     render() { 
         if(this.state.success === true){
-            <Redirect to='/food' />
+            return <Redirect to='/food' />
         }
         return ( 
             <section className="section is-large" id="loginSection">
@@ -49,7 +47,7 @@ class Login extends Component {
                                     <input className="input is-medium" name="password" type="password" placeholder="A Secure Password" onChange={this.onChange} value={this.state.password}></input>
                                 </div>
                             </div>
-                            <button className="button is-info">Log in</button>
+                            <button type="submit" className="button is-info">Log in</button>
                         </form><br />
                         <p className="content has-text-white">Forgot your password? <a>Recover it here.</a></p>
                     </div>
