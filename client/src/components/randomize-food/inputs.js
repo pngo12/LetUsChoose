@@ -49,6 +49,7 @@ class InputForm extends Component {
         this.randomize()
         this.toggleHidden()
     }
+
     // Below resets the input and hides the result
     Redraw = () => {
             this.setState({
@@ -65,6 +66,7 @@ class InputForm extends Component {
                     <div className="column is-4">
             {/* Begin Form below */}
             <form className="is-pulled-right" onSubmit={this.formSubmit}>
+            
                 <div className="field">
                     <label className="label is-size-5">What type of food are you craving?</label>
                     <div className="control">
@@ -75,6 +77,7 @@ class InputForm extends Component {
                     </div>
                 </div>
             </div>
+
                 <div className="field">
                     <label className="label is-size-5">What Genre?</label>
                         <div className="control">

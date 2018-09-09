@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Modal from 'react-responsive-modal'
-import {NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 class Feedback extends Component {
     state = {
@@ -12,48 +12,43 @@ class Feedback extends Component {
     }
     
     onOpenModal = () => {
-        this.setState({ open: true})
-    }
+        this.setState({ open: true})}
 
     onCloseModal = () => {
-        this.setState({open:false})
-    }
+        this.setState({open:false})}
 
     onChange = e => {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    }
+        this.setState({[e.target.name]: e.target.value})}
         
-        formSubmit = e => {          
-          e.preventDefault();
-          this.props.addtoFeedback(this.state);
-          this.setState({
-              name: "",
-              email: "",
-              subject: "",
-              message: "",
-      })
-            this.onOpenModal();
+    formSubmit = e => {          
+        e.preventDefault();
+        this.setState({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+    })
+        this.onOpenModal();
     }
 
     render() {
-        const { open } = this.state;
+    const { open } = this.state;
     return (
         <section className="section is-medium" id="is-medium">
         <h1 className ="title-page"> We value your input </h1>
-        <h2 className = "title-page2"> Please let us know what we can do better! </h2>
-        <div className="columns">
-        <div className ="column is-4 is-offset-4 feedback-container">
-        <form onSubmit={this.formSubmit}>
-        <div className = "field">
-            <label className = "label"> Name</label>
-            <div className="control">
-            <input className="input" type = 'text' placeholder = "First and Last Name" value = {this.state.name} onChange = {this.onChange} name="name" required/>
-            </div>
+            <h2 className = "title-page2"> Please let us know what we can do better! </h2>
+                <div className="columns">
+                    <div className ="column is-4 is-offset-4 feedback-container">
+                        <form onSubmit={this.formSubmit}>
+                            
+                            <div className = "field">
+                                <label className = "label"> Name</label>
+                                <div className="control">
+                                <input className="input" type = 'text' placeholder = "First and Last Name" value = {this.state.name} onChange = {this.onChange} name="name" required/>
+                            </div>
 
             <label className = "label"> Email </label>
-            <div className="control">
+                <div className="control">
                 <input className="input" type="email" placeholder="Please enter your email address" value = {this.state.email} onChange = {this.onChange} name="email" required/>
             </div>
 
@@ -81,7 +76,7 @@ class Feedback extends Component {
                     
                 </div>
                 <div className="control">
-                    <NavLink to='/'><button className="button is-primary">Cancel</button></NavLink>
+                    <Link to='/'><button className="button is-primary">Cancel</button></Link>
                 </div>
             </div>
             </div>
@@ -97,8 +92,8 @@ class Feedback extends Component {
         </div>
     </section>
 
-    )
-}
+        )
+    }
 }
 
 

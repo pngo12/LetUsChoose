@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {NavLink, Redirect} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom'
 
 class Signup extends Component {
     state = { 
@@ -10,10 +10,7 @@ class Signup extends Component {
      }
 
     onChange = e => {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    }
+        this.setState({[e.target.name]: e.target.value})}
 
     formSubmit = e => {
         e.preventDefault()
@@ -21,9 +18,9 @@ class Signup extends Component {
     }
 
     success = (e) => {
-                e.preventDefault()
-                this.setState({isSignedUp: true})
-                return <Redirect to ='/food' />
+        e.preventDefault()
+        this.setState({isSignedUp: true})
+        return <Redirect to ='/food' />
     } 
 
     render() {
@@ -55,10 +52,8 @@ class Signup extends Component {
                                 </div>
                             </div>
                             <button className="button is-info">Sign up!</button>
-                            
                         </form><br />
-                        
-                            <p>Already a user? <NavLink to='/login'>Login Here.</NavLink></p>
+                            <p>Already a user? <Link to='/login'>Login Here.</Link></p>
                     </div>
                 </div>
             </div>

@@ -16,12 +16,11 @@ class Login extends Component {
     
     loginCondition = e => {
         e.preventDefault()
-        let validateCredentials = loginData.filter(x => x.username === this.state.username && x.password === this.state.password).length > 0;
+        let validateCredentials = loginData.find(x => x.username === this.state.username && x.password === this.state.password).length > 0;
         console.log(validateCredentials);
         if (validateCredentials === true){
             this.setState({success:true})
         }
-
     }
 
     render() { 
