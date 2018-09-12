@@ -3,11 +3,8 @@ import axios from 'axios'
 import RenderOption from './renderoption'
 
 const config = {
-    headers: { 'Authorization': 'Bearer O3ILuySaOCGNYr5Oi7nKJTdYB66O4VOZitk3NFDmNIAeFMRRnK-RtDKpeGvdBPSoPfuiGVvhaGF3gwJ1ieyYpwoWNvzb5hXY_7gaK4rHl6XY-6SY8OMS-nFh1AFzW3Yx' },
-    params: {
-        term: 'tacos',
-        location: 'boulder'
-    }
+    headers: { 'Authorization': '' },
+
 }
 
 class Search extends Component {

@@ -33,7 +33,7 @@ class Navbar extends Component {
               <NavLink className="navbar-item" to='/'>Home</NavLink>
               <NavLink className="navbar-item" to='/about'>About</NavLink>
               <NavLink className="navbar-item" to='/feedback'>Give us Feedback</NavLink>
-              <NavLink to='/signup' id="navbutton" className="button has-text-white is-info">Signup</NavLink>
+              {/* <NavLink to='/signup' id="navbutton" className="button has-text-white is-info">Signup</NavLink> */}
             </div>
           </div>
         </div>
