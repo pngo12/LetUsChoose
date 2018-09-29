@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../images/logo.png'
+// import logo from '../images/logo.png'
 import { NavLink } from 'react-router-dom'
 
 class Navbar extends Component {
@@ -21,7 +21,6 @@ class Navbar extends Component {
       <nav className="navbar is-primary">
         <div className="container">
           <div className="navbar-brand">
-            <NavLink className="navbar-item" to='/'><img src={logo} alt="Logo" /></NavLink>
             <span className="navbar-burger burger" data-target="navbarMenuHeroA" onClick={this.toggleOpen}>
               <span></span>
               <span></span>

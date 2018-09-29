@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Data from '../data'
 import RenderOption from './renderoption'
 
 class InputForm extends Component {  
@@ -25,24 +24,24 @@ class InputForm extends Component {
     
     // The below takes the input, filters the choices, and sets the random choice state to the random restaurant
     randomize = () => {
-        const chosenEthnicity = Data.filter(x => this.state.chosenEthn === 'No Preference' ? true : x.ethnicity === this.state.chosenEthn)
-        const chosenGenre = Data.filter(x => this.state.chosenGn === 'No Preference' ? true : x.genre === this.state.chosenGn)
-        let randomOptions;
+        // const chosenEthnicity = Data.filter(x => this.state.chosenEthn === 'No Preference' ? true : x.ethnicity === this.state.chosenEthn)
+        // const chosenGenre = Data.filter(x => this.state.chosenGn === 'No Preference' ? true : x.genre === this.state.chosenGn)
+        // let randomOptions;
         
-        if (this.state.chosenEthn === 'No Preference' && this.state.chosenGn !== 'No Preference') {
-            randomOptions = chosenGenre;
-        } else if (this.state.chosenEthn !== 'No Preference' && this.state.chosenGn === 'No Preference') {
-            randomOptions = chosenEthnicity;
-        } else {
-            randomOptions = [...chosenEthnicity, ...chosenGenre];
-        }
+        // if (this.state.chosenEthn === 'No Preference' && this.state.chosenGn !== 'No Preference') {
+        //     randomOptions = chosenGenre;
+        // } else if (this.state.chosenEthn !== 'No Preference' && this.state.chosenGn === 'No Preference') {
+        //     randomOptions = chosenEthnicity;
+        // } else {
+        //     randomOptions = [...chosenEthnicity, ...chosenGenre];
+        // }
 
-        const randomizeOptions = Math.floor(Math.random() * randomOptions.length)
-        this.setState({
-            randomChoice: randomOptions[randomizeOptions],
-            hasSeenOption: true,
-        })
-        this.toggleHidden()
+        // const randomizeOptions = Math.floor(Math.random() * randomOptions.length)
+        // this.setState({
+        //     randomChoice: randomOptions[randomizeOptions],
+        //     hasSeenOption: true,
+        // })
+        // this.toggleHidden()
     }
 
     dualOnClick = () => {
