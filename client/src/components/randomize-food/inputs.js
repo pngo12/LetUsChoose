@@ -3,12 +3,7 @@ import RenderOption from './renderoption'
 
 class InputForm extends Component {  
     state = {
-        chosenEthn: 'No Preference',
-        chosenGn: 'No Preference',
-        ethnicity: ['No Preference', "Italian", 'Japanese', 'Brazilian', 'American', 'Hawaiian', 'Chinese', 'Vietnamese', 'Greek', 'Korean', 'Mexican', 'Thai'],
-        genre: ['No Preference', 'Pizza', 'Barbecue', 'Poke', 'Dim Sum', 'Soup/Noodles', 'Tacos', 'Sandwiches', 'Gyros', 'Kebabs', 'Seafood', 'Rice/Noodles', 'Burgers', 'Breakfast/Brunch'],
-        randomChoice: '',
-        isHidden: true,
+        isHidden: false,
         hasSeenOption: false
     }
 
@@ -16,11 +11,10 @@ class InputForm extends Component {
         e.preventDefault();
     }
     
-    toggleHidden = () => {
-        this.setState({
-            isHidden: !true
-        })
-    }
+    toggleHidden = () => this.setState({isHidden: !true})
+    
+
+
     
     // The below takes the input, filters the choices, and sets the random choice state to the random restaurant
     randomize = () => {
@@ -70,9 +64,9 @@ class InputForm extends Component {
                     <label className="label is-size-5">What type of food are you craving?</label>
                     <div className="control">
                         <div className="select">
-                        <select value={this.state.chosenEthn} onChange={e => { this.setState({ chosenEthn: e.target.value })}}>
+                        {/* <select value={this.state.chosenEthn} onChange={e => { this.setState({ chosenEthn: e.target.value })}}>
                             {this.state.ethnicity.map(x => <option key={x} value={x}> {x}</option>)}
-                        </select>
+                        </select> */}
                     </div>
                 </div>
             </div>
@@ -81,9 +75,9 @@ class InputForm extends Component {
                     <label className="label is-size-5">What Genre?</label>
                         <div className="control">
                             <div className="select">
-                                <select value={this.state.chosenGn} onChange={e => {this.setState({chosenGn: e.target.value})}}>
+                                {/* <select value={this.state.chosenGn} onChange={e => {this.setState({chosenGn: e.target.value})}}>
                                     {this.state.genre.map(x => <option key={x} value={x}> {x}</option>)}
-                        </select>
+                        </select> */}
                     </div>
                 </div>
             </div>
