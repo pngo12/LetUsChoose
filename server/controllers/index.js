@@ -11,8 +11,9 @@ const searchRequest = {
 
 const findRestaurants = async (req, res) => {
     try {
-        // let response = await client.search(searchRequest);
-        // res.json(response.jsonBody.businesses[0])
+        //comment out the two lines below
+        let response = await client.search(searchRequest);
+        res.json(response.jsonBody.businesses[0])
 
         const query = `
             query {    
