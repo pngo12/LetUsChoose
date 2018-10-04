@@ -3,11 +3,11 @@ const router = express.Router()
 
 const {
     findRestaurants
-} = require('../controllers/index')
+} = require('../controllers')
 
 
 
-router.get('/', findRestaurants)
+router.get('/request', findRestaurants)
 router.post('/:id', findRestaurants)
 
 

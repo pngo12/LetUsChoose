@@ -2,31 +2,30 @@ const yelp = require('yelp-fusion')
 const key = require('../key')
 const client = yelp.client(key)
 const { GraphQLClient } = require('graphql-request');
-
-
-const searchRequest = {
-    term: 'coffee',
-    location: 'costa mesa, ca'
-}
+// const searchRequest = {
+//     term: 'coffee',
+//     location: 'costa mesa, ca'
+// }
 
 const findRestaurants = async (req, res) => {
     try {
-        //comment out the two lines below
-        let response = await client.search(searchRequest);
-        res.json(response.jsonBody.businesses[0])
+        // //comment out the two lines below
+        // let response = await client.search(searchRequest);
+        // res.json(response.jsonBody.businesses[0])
 
         const query = `
-            query {    
-                b1: business(id: "garaje-san-francisco") {
+        {
+            search(term:"taco", location: "Irvine, CA"){
+                total
+                business {
                     name
+                    price
+                    location {
+                        city
+                    }
                 }
-                b2: business(id: "the-bird-san-francisco") {
-                    name
-                }
-                b3: business(id: "working-girls-cafe-san-francisco-3") {
-                    name
-                }   
             }
+        }
         `
         const endpoint = "https://api.yelp.com/v3/graphql";
         const graphQLClient = new GraphQLClient(endpoint, {
@@ -36,7 +35,7 @@ const findRestaurants = async (req, res) => {
         })
 
         const data = await graphQLClient.request(query);
-        console.log(JSON.stringify(data, undefined, 2))
+        console.log(JSON.stringify(data, null, 2))
 
         res.json(data)
 
