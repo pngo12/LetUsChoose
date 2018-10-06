@@ -10,6 +10,9 @@
 # production
 /build
 
+#css file
+/App.scss
+
 # misc
 .DS_Store
 .env.local
