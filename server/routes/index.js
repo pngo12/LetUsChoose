@@ -6,9 +6,8 @@ const {
 } = require('../controllers')
 
 
-
 router.get('/request', findRestaurants)
-router.post('/:id', findRestaurants)
+router.post('/send', findRestaurants)
 
 
 
