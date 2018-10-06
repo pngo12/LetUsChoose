@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import RenderOption from './renderoption'
 
-const config = {
-    headers: { 'Authorization': '' },
-
-}
-
 class Search extends Component {
     state = { 
         name: '',
@@ -17,7 +12,7 @@ class Search extends Component {
      }
 
      getData = () => {
-         axios.get('https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=delis&latitude=37.786882&longitude=-122.399972&', config)
+         axios.get('',)
          .then(response => {
              console.log(response.data)
          })

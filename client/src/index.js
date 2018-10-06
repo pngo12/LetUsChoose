@@ -17,7 +17,7 @@ ReactDOM.render(
         <Navbar />
             <Switch>
 
-                <Route exct path='/' component={App} />
+                <Route exact path='/' component={App} />
                 <Route path='/feedback' component={Feedback} />
                 <Route path='/about' component={About} />
                 <Route path='/food' component={InputForm} />
