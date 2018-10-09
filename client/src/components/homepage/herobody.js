@@ -14,7 +14,7 @@ const HeroBody = () => {
                         <h1 className="title is-2">
                             Tired of figuring out where to eat?<br /></h1>
                         <h2 className="subtitle is-3"> We'll take care of that.</h2>
-                            <NavLink className="button is-large is-info is-hovered" to='/food'>Get Started</NavLink>
+                            <NavLink className="button is-large is-info is-hovered" to='/search'>Get Started</NavLink>
                             </div>
                     <div className="column">
                         <figure className="is-horizontal-center">

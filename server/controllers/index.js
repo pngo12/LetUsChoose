@@ -1,6 +1,6 @@
 const yelp = require('yelp-fusion')
 const key = require('../key')
-const client = yelp.client(key)
+// const client = yelp.client(key)
 const { GraphQLClient } = require('graphql-request');
 
 
@@ -25,7 +25,6 @@ const findRestaurants = async (req, res) => {
             }
             display_phone
             location{
-                address1
               formatted_address
             }
         }
