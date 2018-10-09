@@ -2,12 +2,13 @@ const express = require('express')
 const router = express.Router()
 
 const {
-    findRestaurants
+    findRestaurants,
+    receiveData
 } = require('../controllers')
 
 
 router.get('/request', findRestaurants)
-router.post('/send', findRestaurants)
+router.post('/receive', receiveData)
 
 
 

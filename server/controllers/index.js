@@ -3,12 +3,15 @@ const key = require('../key')
 // const client = yelp.client(key)
 const { GraphQLClient } = require('graphql-request');
 
+const receiveData = (req,res) => {
+
+}
 
 const findRestaurants = async (req, res) => {
     try {
         const query = `
          { 
-            search(term:"taco", 
+            search(term:"Japanese", 
                 location: "Irvine, CA",
                 radius: 2500
                 )
@@ -36,15 +39,16 @@ const findRestaurants = async (req, res) => {
                 'Authorization': `Bearer ${key}`
             }
         })
-
         const data = await graphQLClient.request(query);
-        console.log(JSON.stringify(data, null, 2))
-
-        res.json(data)
-
+        // let yelpData = JSON.stringify(data, null, 2)
+        let yelpResult = data.search.business[Math.floor(Math.random() * 20)]
+        // .then(response => {
+        //     response.send(yelpResult)
+        //     console.log('did res.send hit')
+        // })
     } catch (e) {
         res.status(404).send(e.message)
     }
 }
 
-module.exports = { findRestaurants }
+module.exports = { findRestaurants, receiveData }

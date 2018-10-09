@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import axios from 'axios'
+import axios from 'axios'
 // import RenderOption from './renderoption'
-// import { Query } from 'react-apollo';
+import { Query } from 'react-apollo';
 import gql from 'graphql-tag'
 import client from '../../index'
 
@@ -14,34 +14,41 @@ class Search extends Component {
      }
 
     requestData = () => {
-        client.query({
-        query: gql`
-            query search(
-                term: ${this.state.alias},
-                location: ${this.state.location},
-                radius: ${2500}
-            )
-            {
-                business{
-                    name
-                    price
-                    hours {
-                        is_open_now
-                        open {
-                            start
-                            end
-                        }
-                    }
-                    display_phone
-                    location {
-                        formatted_address
-                    }
-                }
-            }`
-        })
-        .try(data => console.log(data))
-        .catch(error => console.log(error));
-     };
+        axios.get('http://localhost:4000/request', { crossdomain: true })
+    .then(res => {
+        console.log(res.data)
+    })
+}
+
+    // requestData = () => {
+    //     client.query({
+    //     query: gql`
+    //         query search(
+    //             # term: ${this.state.alias},
+    //             # location: ${this.state.location},
+    //             # radius: ${2500}
+    //         )
+    //         {
+    //             business{
+    //                 name
+    //                 price
+    //                 hours {
+    //                     is_open_now
+    //                     open {
+    //                         start
+    //                         end
+    //                     }
+    //                 }
+    //                 display_phone
+    //                 location {
+    //                     formatted_address
+    //                 }
+    //             }
+    //         }`
+    //     })
+    //     .then(data => console.log(data))
+    //     .catch(error => console.log(error));
+    //  };
 
     //  requestdata = () => {
     //      <Query
