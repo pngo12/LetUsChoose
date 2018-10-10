@@ -12,7 +12,10 @@ class Search extends Component {
     requestData = async () => {
         try {
             const receiveRestaurant = await axios.get(`http://localhost:4000/request/${this.state.alias}/${this.state.location}`, { crossdomain: true })
-            console.log("Received Resturant: ", receiveRestaurant.data);
+            console.log("Received Resturant: ", receiveRestaurant);
+            this.setState({
+                data: receiveRestaurant.data
+            })
         } catch (e) {
             console.log("Received receiveRestaurant error: ", e)
         }
