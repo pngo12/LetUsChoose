@@ -11,15 +11,8 @@ class Search extends Component {
 
     requestData = async () => {
         try {
-            const receiveInput = await axios.post('http://localhost:4000/receive', { alias: this.state.alias, location: this.state.location })
-            console.log("Received Input: ", receiveInput);
-        }
-        catch (e) {
-            console.log("Received receiveInput error: ", e);
-        }
-        try {
             const receiveRestaurant = await axios.get(`http://localhost:4000/request/${this.state.alias}/${this.state.location}`, { crossdomain: true })
-            console.log("Received Resturant: ", receiveRestaurant);
+            console.log("Received Resturant: ", receiveRestaurant.data);
         } catch (e) {
             console.log("Received receiveRestaurant error: ", e)
         }
