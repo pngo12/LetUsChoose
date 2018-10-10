@@ -1,34 +1,30 @@
 const yelp = require('yelp-fusion')
 const key = require('../key')
-// const client = yelp.client(key)
 const { GraphQLClient } = require('graphql-request');
 
-const receiveData = (req,res) => {
-    console.log(req.body)
-    let search = req.body
-}
-
-const findRestaurants = async (req, res) => {
+const findRestaurants = async (req, res,) => {
+    let {alias, location} = req.params;
     try {
-        const query = `
-         { 
-            search(term:"Japanese", 
-                location: "Irvine, CA",
-                radius: 2500
-                )
+        const query = `query 
             {
-            business{
-            name
+                search (
+                    term: ${alias}, 
+                    location: ${location},
+                    radius: 2500
+                    )
+            {
+            business { 
+            name 
             price
-            hours{
+            hours {
               is_open_now
-              open{
+              open {
                 start
                 end
               }
             }
             display_phone
-            location{
+            location {
               formatted_address
             }
         }
@@ -41,14 +37,13 @@ const findRestaurants = async (req, res) => {
             }
         })
         const data = await graphQLClient.request(query);
-        // let yelpData = JSON.stringify(data, null, 2)
-        // let yelpResult = data.search.business[Math.floor(Math.random() * 20)]
         let yelpResult = await data.search.business[Math.floor(Math.random() * 20)]
-            res.send(yelpResult)
-    } 
+    
+        res.status(200).send(yelpResult)
+    }
     catch (e) {
         res.status(404).send(e.message)
     }
 }
 
-module.exports = { findRestaurants, receiveData }
+module.exports = { findRestaurants }

@@ -4,31 +4,35 @@ import axios from 'axios'
 
 
 class Search extends Component {
-    state = { 
+    state = {
         alias: '',
         location: ''
-     }
+    }
 
-    requestData = () => {
-        axios.post('http://localhost/4000/receive', `{alias:${this.state.alias}, location:${this.state.location}}`)
-        .then( res => {console.log(res.data)}
-        //     axios.get('http://localhost:4000/request', { crossdomain: true })
-        //     .then(res => {
-        //         console.log(res.data)
-        // })
-    )
-    .catch(e => {console.log(e)})
-}
+    requestData = async () => {
+        try {
+            const receiveInput = await axios.post('http://localhost:4000/receive', { alias: this.state.alias, location: this.state.location })
+            console.log("Received Input: ", receiveInput);
+        }
+        catch (e) {
+            console.log("Received receiveInput error: ", e);
+        }
+        try {
+            const receiveRestaurant = await axios.get(`http://localhost:4000/request/${this.state.alias}/${this.state.location}`, { crossdomain: true })
+            console.log("Received Resturant: ", receiveRestaurant);
+        } catch (e) {
+            console.log("Received receiveRestaurant error: ", e)
+        }
+    }
 
-
-handleOnChange = e => {
-    this.setState({
-        [e.target.name]: e.target.value.toLowerCase()
-    })
-}     
-render() { 
-    return ( 
-        <section className="section is-medium">
+    handleOnChange = e => {
+        this.setState({
+            [e.target.name]: e.target.value.toLowerCase()
+        })
+    }
+    render() {
+        return (
+            <section className="section is-medium">
                 <div className="columns">
                     <div className="column is-4">
                         <form className="form">
@@ -37,14 +41,15 @@ render() {
                             <label>Where are you located?</label>
                             <input className="input" value={this.state.value} onChange={this.handleOnChange} name="location" placeholder="Zipcode OR city"></input>
                             <a className="button" onClick={this.requestData}>Find me something!</a>
-                        </form> 
-                    <div className="column is-4">
-                    </div>
+                        </form>
+                        <div className="column is-4">
+                            {/* build a component or have data here  */}
+                        </div>
                     </div>
                 </div>
             </section>
-         );
-        }
+        );
     }
-    
+}
+
 export default Search;

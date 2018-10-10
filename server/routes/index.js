@@ -7,8 +7,8 @@ const {
 } = require('../controllers')
 
 
-router.get('/request', findRestaurants)
-router.post('/receive', receiveData)
+router.get('/request/:alias/:location', findRestaurants)
+// router.post('/receive', receiveData)
 
 
 
