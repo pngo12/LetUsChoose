@@ -4,7 +4,8 @@ const key = require('../key')
 const { GraphQLClient } = require('graphql-request');
 
 const receiveData = (req,res) => {
-
+    console.log(req.body)
+    let search = req.body
 }
 
 const findRestaurants = async (req, res) => {
@@ -41,12 +42,11 @@ const findRestaurants = async (req, res) => {
         })
         const data = await graphQLClient.request(query);
         // let yelpData = JSON.stringify(data, null, 2)
-        let yelpResult = data.search.business[Math.floor(Math.random() * 20)]
-        // .then(response => {
-        //     response.send(yelpResult)
-        //     console.log('did res.send hit')
-        // })
-    } catch (e) {
+        // let yelpResult = data.search.business[Math.floor(Math.random() * 20)]
+        let yelpResult = await data.search.business[Math.floor(Math.random() * 20)]
+            res.send(yelpResult)
+    } 
+    catch (e) {
         res.status(404).send(e.message)
     }
 }

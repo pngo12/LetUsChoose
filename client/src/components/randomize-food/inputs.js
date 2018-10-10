@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import RenderOption from './renderoption'
 
 // class InputForm extends Component {  
 //     state = {

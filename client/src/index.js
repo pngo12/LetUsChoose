@@ -14,7 +14,7 @@ import Search from './components/randomize-food/search'
 import './App.css';
 
 const client = new ApolloClient({
-    uri: "http://localhost:3000/request"
+    uri: "http://localhost:4000/request"
 })
 
 ReactDOM.render(
@@ -37,7 +37,5 @@ ReactDOM.render(
 </ApolloProvider>,
 
 document.getElementById('root'));
-
-export default {client}
 
 
