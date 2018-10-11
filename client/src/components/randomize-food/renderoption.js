@@ -4,7 +4,7 @@ import './random.css'
 const RenderOption = props => {
     return ( 
         <div className="card is-pulled-left has-text-centered">
-            <p id="card-title" className="title is-3" id="dark-title">We chose {props.name} for you</p>
+            <p className="title is-3" id="dark-title">We chose {props.name} for you</p>
             <div className="card-image">
                 <figure className="image" id="size">
                     <a href={props.link} target= "_blank">

@@ -9,7 +9,6 @@ import Feedback from './components/feedback'
 import About from './components/about'
 import Navbar from './components/navbar'
 import Footer from './components/footer'
-import InputForm from './components/randomize-food/inputs'
 import Search from './components/randomize-food/search'
 import './App.css';
 
@@ -27,7 +26,6 @@ ReactDOM.render(
                     <Route exact path='/' component={App} />
                     <Route path='/feedback' component={Feedback} />
                     <Route path='/about' component={About} />
-                    <Route path='/food' component={InputForm} />
                     <Route path='/search' component={Search} />
                     
                 </Switch>
