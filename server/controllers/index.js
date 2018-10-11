@@ -10,6 +10,8 @@ const findRestaurants = async (req, res) => {
                     business {
                         name
                         photos
+                        url
+                        display_phone
                         hours {
                             is_open_now
                             open {
@@ -17,7 +19,6 @@ const findRestaurants = async (req, res) => {
                                 end
                             }       
                         }
-                        display_phone
                         location {
                             formatted_address
                         }
