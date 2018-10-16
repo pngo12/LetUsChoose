@@ -32,6 +32,9 @@ const findRestaurants = async (req, res) => {
             }
         })
         const data = await graphQLClient.request(findRestaurantsQuery,{ location, alias });
+
+        // let yelpResult = data.search.business.filter(x => x.hours.is_open_now === true)
+        // console.log(yelpResult)
         // let yelpResult = data.search.business.hours
         // let filtered = yelpResult.filter(open => open.hours.is_open_now == true)
         // console.log(yelpResult)
