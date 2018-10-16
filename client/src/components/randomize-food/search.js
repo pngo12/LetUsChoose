@@ -52,6 +52,8 @@ class Search extends Component {
                                     photo={data.photos}
                                     phone={data.display_phone}
                                     address={data.location.formatted_address}
+                                    open={data.hours[0].open.map(x => x.start)}
+                                    close={data.hours[0].open.map(x => x.start)}
                                     link={data.url}
                                 />
                             }

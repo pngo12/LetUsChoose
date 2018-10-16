@@ -24,6 +24,10 @@ const RenderOption = props => {
                                     <tr>
                                         <td><p className="subtitle is-6 has-text-weight-bold">Address: {props.address}</p></td>
                                     </tr>
+                                    <tr>
+                                        <td><p className="subtitle is-6 has-text-weight-bold">Open: {props.open}</p></td>
+                                        <td><p className="subtitle is-6 has-text-weight-bold">Close: {props.close}</p></td>
+                                    </tr>
                                 </tbody>
                             </table> 
                         </div>
