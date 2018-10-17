@@ -32,7 +32,7 @@ const findRestaurants = async (req, res) => {
             }
         })
         const data = await graphQLClient.request(findRestaurantsQuery,{ location, alias });
-
+            // console.log(data.search.business);
         // let yelpResult = data.search.business.filter(x => x.hours.is_open_now === true)
         // console.log(yelpResult)
         // let yelpResult = data.search.business.hours
@@ -40,8 +40,10 @@ const findRestaurants = async (req, res) => {
         // console.log(yelpResult)
 
 
-        let yelpResult2 = await data.search.business[Math.floor(Math.random() * 20)]
-        res.status(200).send(yelpResult2)
+        let yelpResult2 = await data.search.business[Math.floor(Math.random() * data.search.business.length)]
+        res.status(200).send(yelpResult2);
+        // res.status(200).json(data.search.business);
+        // for activity
     }
     catch (e) {
         res.status(404).send(e.message)

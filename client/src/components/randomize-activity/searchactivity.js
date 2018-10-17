@@ -12,13 +12,13 @@ class SearchActivity extends Component {
     requestData = async e => {
         e.preventDefault();
         try {
-            const receiveRestaurant = await axios.get(`http://localhost:4000/request/${this.state.alias}/${this.state.location}`, { crossdomain: true })
-            console.log("Received Resturant: ", receiveRestaurant);
+            const receiveActivity = await axios.get(`http://localhost:4000/request/${this.state.alias}/${this.state.location}`, { crossdomain: true })
+            console.log("Received Activity: ", receiveActivity);
             this.setState({
-                data: receiveRestaurant.data
+                data: receiveActivity.data
             });
         } catch (e) {
-            console.log("Received receiveRestaurant error: ", e)
+            console.log("Received receiveActivity error: ", e)
         }
     }
 
@@ -35,7 +35,7 @@ class SearchActivity extends Component {
                     <div className="column is-4">
                         <form className="form" onSubmit={this.requestData}>
                             <label>What type of activity are you trying to do?</label>
-                            <input className="input" value={this.state.value} onChange={this.handleOnChange} name="alias" placeholder="Japanese, Mexican, etc."></input>
+                            <input className="input" value={this.state.value} onChange={this.handleOnChange} name="alias" placeholder="Hiking, Swimming, etc."></input>
                             <label>Where are you located?</label>
                             <input className="input" value={this.state.value} onChange={this.handleOnChange} name="location" placeholder="Zipcode OR city"></input>
                             <br /><br />
