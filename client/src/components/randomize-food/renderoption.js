@@ -19,10 +19,10 @@ const RenderOption = props => {
                             <table className="table">
                                 <tbody>
                                     <tr>
-                                        <td><p className="subtitle is-6 has-text-weight-bold">Phone Number: {props.phone}</p></td>
+                                        <td><p className="subtitle is-6 has-text-weight-bold">Their number i: {props.phone}</p></td>
                                     </tr>
                                     <tr>
-                                        <td><p className="subtitle is-6 has-text-weight-bold">Address: {props.address}</p></td>
+                                        <td><p className="subtitle is-6 has-text-weight-bold">Their address: {props.address}</p></td>
                                     </tr>
                                     <tr>
                                         <td><p className="subtitle is-6 has-text-weight-bold">Open: {props.open}</p></td>
