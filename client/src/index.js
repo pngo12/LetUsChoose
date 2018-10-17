@@ -11,6 +11,7 @@ import Navbar from './components/navbar'
 import Footer from './components/footer'
 import Search from './components/randomize-food/search'
 import './App.css';
+import SearchActivity from './components/randomize-activity/searchactivity';
 
 const client = new ApolloClient({
     uri: "http://localhost:4000/request"
@@ -27,6 +28,7 @@ ReactDOM.render(
                     <Route path='/feedback' component={Feedback} />
                     <Route path='/about' component={About} />
                     <Route path='/search' component={Search} />
+                    <Route path='/searchactivity' component={SearchActivity} />
                     
                 </Switch>
             <Footer />
