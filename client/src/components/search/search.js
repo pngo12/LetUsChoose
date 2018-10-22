@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import RenderOption from './renderoption'
+import RenderOption from '../search/renderoption'
 
 class Search extends Component {
     state = {
@@ -22,11 +22,8 @@ class Search extends Component {
         }
     }
 
-    handleOnChange = e => {
-        this.setState({
-            [e.target.name]: e.target.value.toLowerCase()
-        })
-    }
+    handleOnChange = e => this.setState({ [e.target.name]: e.target.value.toLowerCase() })
+
     render() {
         let data = this.state.data;
         return (
@@ -41,24 +38,24 @@ class Search extends Component {
                             <br /><br />
                             <input type="submit" value="Find me something!" className="button"></input>
                         </form>
-                        </div>
-                        <div className="column is-2"></div>
-                        <div className="column is-6">
-                            {
-                                data === '' 
+                    </div>
+                    <div className="column is-2"></div>
+                    <div className="column is-6">
+                        {
+                            data === ''
                                 ? ''
-                                : <RenderOption 
+                                : <RenderOption
                                     name={data.name}
                                     photo={data.photos}
                                     phone={data.display_phone}
                                     address={data.location.formatted_address}
                                     open={data.hours[0].open.map(x => x.start)}
-                                    close={data.hours[0].open.map(x => x.start)}
+                                    close={data.hours[0].open.map(x => x.end)}
                                     link={data.url}
                                 />
-                            }
-                        </div>
+                        }
                     </div>
+                </div>
             </section>
         );
     }

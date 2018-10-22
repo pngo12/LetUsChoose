@@ -1,7 +1,7 @@
-import React from 'react';  
+import React from 'react';
 
 const HomeAbout = () => {
-    return ( 
+    return (
 
         <section className="section is-small">
             <div className="container">
@@ -15,9 +15,9 @@ const HomeAbout = () => {
                     </div>
                 </div>
             </div>
-            </section>
+        </section>
 
-     );
+    );
 }
- 
+
 export default HomeAbout;
