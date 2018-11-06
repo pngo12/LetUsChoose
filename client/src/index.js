@@ -9,7 +9,7 @@ import Feedback from './components/feedback/feedback'
 import About from './components/about/about'
 import Navbar from './components/nav/navbar'
 import Footer from './components/footer/footer'
-import Search from './components/randomize-food/search'
+import Search from './components/search/search'
 import './App.css';
 import SearchActivity from './components/randomize-activity/searchactivity';
 
@@ -18,10 +18,10 @@ const client = new ApolloClient({
 })
 
 ReactDOM.render(
-<ApolloProvider client={client}>
-    <BrowserRouter>
-        <div>
-            <Navbar />
+    <ApolloProvider client={client}>
+        <BrowserRouter>
+            <div>
+                <Navbar />
                 <Switch>
 
                     <Route exact path='/' component={App} />
@@ -29,13 +29,13 @@ ReactDOM.render(
                     <Route path='/about' component={About} />
                     <Route path='/search' component={Search} />
                     <Route path='/searchactivity' component={SearchActivity} />
-                    
-                </Switch>
-            <Footer />
-        </div>
-    </BrowserRouter>
-</ApolloProvider>,
 
-document.getElementById('root'));
+                </Switch>
+                <Footer />
+            </div>
+        </BrowserRouter>
+    </ApolloProvider>,
+
+    document.getElementById('root'));
 
 

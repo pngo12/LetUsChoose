@@ -41,13 +41,13 @@ class SearchActivity extends Component {
                             <br /><br />
                             <input type="submit" value="Find me something!" className="button"></input>
                         </form>
-                        </div>
-                        <div className="column is-2"></div>
-                        <div className="column is-6">
-                            {
-                                data === '' 
+                    </div>
+                    <div className="column is-2"></div>
+                    <div className="column is-6">
+                        {
+                            data === ''
                                 ? ''
-                                : <RenderActivity 
+                                : <RenderActivity
                                     name={data.name}
                                     photo={data.photos}
                                     phone={data.display_phone}
@@ -56,9 +56,9 @@ class SearchActivity extends Component {
                                     close={data.hours[0].open.map(x => x.start)}
                                     link={data.url}
                                 />
-                            }
-                        </div>
+                        }
                     </div>
+                </div>
             </section>
         );
     }

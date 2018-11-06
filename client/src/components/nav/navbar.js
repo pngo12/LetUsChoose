@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../images/LUC.png'
+import logo from '../../images/LUC.png'
 import { NavLink } from 'react-router-dom'
 
 class Navbar extends Component {
@@ -7,15 +7,11 @@ class Navbar extends Component {
     toggleOn: false
   }
 
-  toggleOpen = () => {
-    this.setState({ toggleOn: !this.state.toggleOn })
-  }
+  toggleOpen = () => this.setState({ toggleOn: !this.state.toggleOn })
 
   render() {
     let burgerClass = ['navbar-menu'];
-    if (this.state.toggleOn) {
-      burgerClass.push('is-active')
-    }
+    if (this.state.toggleOn) burgerClass.push('is-active')
 
     return (
       <nav className="navbar is-primary">
