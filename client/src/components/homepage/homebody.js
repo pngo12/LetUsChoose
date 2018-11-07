@@ -1,8 +1,8 @@
 import React from 'react';
-import HomeBanner from './homebanner'
-import HomeAbout from './homeabout'
-import HeroBody from './herobody'
-import { NavLink } from 'react-router-dom'
+import HomeBanner from './homebanner';
+import HomeAbout from './homeabout';
+import HeroBody from './herobody';
+import { NavLink } from 'react-router-dom';
 
 
 const HomeBody = () => {

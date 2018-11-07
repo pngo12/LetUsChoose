@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios'
-import Form from './form'
-import RenderOption from '../search/renderoption'
+import axios from 'axios';
+import Form from './form';
+import RenderOption from '../search/renderoption';
 
 class Search extends Component {
     state = {
@@ -16,13 +16,20 @@ class Search extends Component {
         try {
             const receiveRestaurant = await axios.get(`http://localhost:4000/request/${this.state.alias}/${this.state.location}`, { crossdomain: true })
             console.log("Received Resturant: ", receiveRestaurant);
-            this.setState({
-                data: receiveRestaurant.data
-            });
+            this.setState({ data: receiveRestaurant.data });
         } catch (e) {
             console.log("Received receiveRestaurant error: ", e);
         }
-        this.setState({ toggleOption: !this.state.toggleOption });
+        this.setState({ toggleOption: true });
+    }
+
+    handleRedraw = () => {
+        this.setState({
+            alias: '',
+            location: '',
+            data: '',
+            toggleOption: false
+        })
     }
 
     handleOnChange = e => this.setState({ [e.target.name]: e.target.value.toLowerCase() });
@@ -30,7 +37,7 @@ class Search extends Component {
     render() {
         let data = this.state.data;
         return (
-            <section className="section is-medium container">
+            <section className="section is-large container">
                 <div className="columns">
                     <div className="column is-2"></div>
                     <div className="column is-8">
@@ -46,22 +53,19 @@ class Search extends Component {
                                     link={data.url}
                                     redraw={this.requestData}
                                 />
-                                : <Form
-                                    submit={this.handleSubmit}
-                                    value={this.state.value}
-                                    onChange={this.handleOnChange}
-                                    inputTextOne='What type of food are you craving?'
-                                    inputTextTwo='Where are you located?'
-
-                                />
-                            // <form className="form" onSubmit={this.requestData}>
-                            //     <label>What type of food are you craving?</label>
-                            //     <input className="input" value={this.state.value} onChange={this.handleOnChange} name="alias" placeholder="Japanese, Mexican, etc."></input>
-                            //     <label>Where are you located?</label>
-                            //     <input className="input" value={this.state.value} onChange={this.handleOnChange} name="location" placeholder="Zipcode OR city"></input>
-                            //     <br /><br />
-                            //     <input type="submit" value="Find me something!" className="button"></input>
-                            // </form>
+                                :
+                                <div>
+                                    <span className='has-text-centered'><p id="headline">Let's find you something to eat or do</p></span>
+                                    <Form
+                                        submit={this.requestData}
+                                        value={this.state.value}
+                                        onChange={this.handleOnChange}
+                                        inputTextOne='What are you itching for?'
+                                        inputTextTwo='Where are you located?'
+                                        placeholder='Japanese, Mexican, hiking, etc.'
+                                        locationHolder='City or Zip code'
+                                    />
+                                </div>
                         }
                     </div>
                     <div className="column is-2"></div>
@@ -70,5 +74,16 @@ class Search extends Component {
         );
     }
 }
+
+
+// var getFormattedTime = function (fourDigitTime) {
+//     var hours24 = parseInt(fourDigitTime.substring(0, 2));
+//     var hours = ((hours24 + 11) % 12) + 1;
+//     var amPm = hours24 > 11 ? 'pm' : 'am';
+//     var minutes = fourDigitTime.substring(2);
+
+//     return hours + ':' + minutes + amPm;
+// };
+
 
 export default Search;

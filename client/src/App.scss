@@ -21,6 +21,9 @@ $primary: $dark;
 $info: $orange;
 $footer-background-color:$indigo;
 
+//Modify section padding
+$section-padding-large: 7.5rem 1.5rem;
+
 #dark-title{
     color: $dark;
 }
@@ -38,13 +41,13 @@ $footer-background-color:$indigo;
 }
 
 .title-page {
-    font-size: 75px;
+    font-size: 4.6em;
     text-align: center;
     margin-top: 15px;
     font-weight: 400;
 }
 .title-page2 {
-    font-size: 23px;
+    font-size: 1.4em;
     text-align: center;
     margin-bottom: 35px;
     font-weight: 400;
@@ -69,6 +72,16 @@ $footer-background-color:$indigo;
 
 #biggest-container {
     margin-top: -50%;
+}
+
+#headline {
+    color: $dark;
+    font-size: 2em;
+    margin: 0 0 2% 0;
+}
+
+.label{
+    margin: .8% 0;
 }
 
 @import"../node_modules/bulma/bulma.sass";

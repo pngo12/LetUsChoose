@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import HomeBody from './components/homepage/homebody'
+import HomeBody from './components/homepage/homebody';
 
 
 class App extends Component {

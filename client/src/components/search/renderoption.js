@@ -1,5 +1,5 @@
 import React from 'react';
-import './random.css'
+import './random.css';
 
 const RenderOption = props => {
     return (

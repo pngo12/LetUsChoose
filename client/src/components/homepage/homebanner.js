@@ -1,7 +1,7 @@
 import React from 'react';
 import thinking from './images/thinking.png';
-import food from './images/food.png'
-import shocked from './images/shocked.png'
+import food from './images/food.png';
+import shocked from './images/shocked.png';
 
 const HomeBanner = () => {
     return (
@@ -30,7 +30,7 @@ const HomeBanner = () => {
 
                     <h1 className="title">Indecisive group?</h1>
                     <p className="content is-pulled-left has-text-white">If your group of friends are the indecisive type then we're the solution type.
-                 LUC isn't just for your boo, it's for the homies too. Let us know what your options are, and we'll randomly choose one.</p>
+                 LUC isn't just for your boo, it's for your friends too.</p>
                 </div>
             </div>
 
