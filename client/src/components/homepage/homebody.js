@@ -15,7 +15,7 @@ const HomeBody = () => {
             {/* Start CTA below */}
             <section className="section has-text-centered">
                 <h1 className="title" id="dark-title" >Ready to test your LUC?</h1>
-                <NavLink className="button is-large is-info is-hovered has-text-white" to='/signup'>Get Started</NavLink>
+                <NavLink className="button is-large is-info is-hovered has-text-white" to='/search'>Get Started</NavLink>
             </section>
         </section>
 
