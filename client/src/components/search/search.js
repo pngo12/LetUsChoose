@@ -47,7 +47,10 @@ class Search extends Component {
                                     name={data.name}
                                     photo={data.photos}
                                     phone={data.display_phone}
-                                    address={data.location.formatted_address}
+                                    street={data.location.address1}
+                                    city={data.location.city}
+                                    state={data.location.state}
+                                    zip={data.location.postal_code}
                                     open={data.hours[0].open.map(x => x.start)}
                                     close={data.hours[0].open.map(x => x.end)}
                                     link={data.url}
@@ -74,16 +77,5 @@ class Search extends Component {
         );
     }
 }
-
-
-// var getFormattedTime = function (fourDigitTime) {
-//     var hours24 = parseInt(fourDigitTime.substring(0, 2));
-//     var hours = ((hours24 + 11) % 12) + 1;
-//     var amPm = hours24 > 11 ? 'pm' : 'am';
-//     var minutes = fourDigitTime.substring(2);
-
-//     return hours + ':' + minutes + amPm;
-// };
-
 
 export default Search;

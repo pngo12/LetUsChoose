@@ -22,7 +22,7 @@ const RenderOption = props => {
                                         <td><p className="subtitle is-6 has-text-weight-bold">Phone number: {props.phone}</p></td>
                                     </tr>
                                     <tr>
-                                        <td><p className="subtitle is-6 has-text-weight-bold">Address: {props.address}</p></td>
+                                        <td><p className="subtitle is-6 has-text-weight-bold">Address: {props.street}, {props.city} {props.state} {props.zip}</p></td>
                                     </tr>
                                     <tr>
                                         <td><p className="subtitle is-6 has-text-weight-bold">Open: {props.open}</p></td>

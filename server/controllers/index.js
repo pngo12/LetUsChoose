@@ -1,10 +1,11 @@
-const key = require('../key')
+const key = require('../key');
 const { GraphQLClient } = require('graphql-request');
 
 const findRestaurants = async (req, res) => {
     let { alias, location } = req.params;
     try {
         const findRestaurantsQuery =
+        // Grab the alias and location param and query
             `query findRestaurantsQuery($alias: String, $location: String) {
                 search (term: $alias, location: $location, radius: 2500) {
                     business {
@@ -21,7 +22,10 @@ const findRestaurants = async (req, res) => {
                             }       
                         }
                         location {
-                            formatted_address
+                            address1
+                            city
+                            state
+                            postal_code
                         }
                     }
                 }
@@ -31,19 +35,14 @@ const findRestaurants = async (req, res) => {
             headers: {
                 'Authorization': `Bearer ${key}`
             }
-        })
+        });
         const data = await graphQLClient.request(findRestaurantsQuery, { location, alias });
-        console.log(data.hours.filter(x => x.open.length > 0));
-        // let yelpResult = data.search.business.hours
-        // let filtered = yelpResult.filter(open => open.hours.is_open_now == true)
-
+        // Randomize the results and send only one
         let yelpResult2 = data.search.business[Math.floor(Math.random() * data.search.business.length)]
-        // console.log(yelpResult2.hours[0].open)
-        // console.log(yelpResult2.filter(x => x.hours[0].open === true))
         res.status(200).send(yelpResult2);
     }
     catch (e) {
-        res.status(404).send(e.message)
+        res.status(404).send(e.message);
     }
 }
 
