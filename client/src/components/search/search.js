@@ -32,6 +32,17 @@ class Search extends Component {
         })
     }
 
+    convertClock = (fourDigitTime) => {
+            let hours24 = parseInt(fourDigitTime.substring(0,2));
+            let hours = ((hours24 + 11) % 12) + 1;
+            let amPm = hours24 > 11 ? 'pm' : 'am';
+            let minutes = fourDigitTime.substring(2);
+         
+            return hours + ':' + minutes + amPm;
+         };
+    
+    
+    
     handleOnChange = e => this.setState({ [e.target.name]: e.target.value.toLowerCase() });
 
     render() {
@@ -51,8 +62,8 @@ class Search extends Component {
                                     city={data.location.city}
                                     state={data.location.state}
                                     zip={data.location.postal_code}
-                                    open={data.hours[0].open.map(x => x.start)}
-                                    close={data.hours[0].open.map(x => x.end)}
+                                    open={data.hours[0].open.map(x => this.convertClock(x.start))}
+                                    close={data.hours[0].open.map(x => this.convertClock(x.end))}
                                     link={data.url}
                                     redraw={this.requestData}
                                 />
