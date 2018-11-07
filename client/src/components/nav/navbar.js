@@ -29,8 +29,6 @@ class Navbar extends Component {
           <div id="navbarMenuHeroA" className={burgerClass.join(' ')}>
             <div className="navbar-end">
               <NavLink className="navbar-item" to='/'>Home</NavLink>
-              <NavLink className="navbar-item" to='/about'>About</NavLink>
-              <NavLink className="navbar-item" to='/feedback'>Give us Feedback</NavLink>
             </div>
           </div>
         </div>

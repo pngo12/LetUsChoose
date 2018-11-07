@@ -4,8 +4,8 @@ const { GraphQLClient } = require('graphql-request');
 const findRestaurants = async (req, res) => {
     let { alias, location } = req.params;
     try {
-        const findRestaurantsQuery = `
-            query findRestaurantsQuery($alias: String, $location: String) {
+        const findRestaurantsQuery =
+            `query findRestaurantsQuery($alias: String, $location: String) {
                 search (term: $alias, location: $location, radius: 2500) {
                     business {
                         name
@@ -17,6 +17,7 @@ const findRestaurants = async (req, res) => {
                             open {
                                 start
                                 end
+                                day
                             }       
                         }
                         location {
@@ -31,19 +32,15 @@ const findRestaurants = async (req, res) => {
                 'Authorization': `Bearer ${key}`
             }
         })
-        const data = await graphQLClient.request(findRestaurantsQuery,{ location, alias });
-            // console.log(data.search.business);
-        // let yelpResult = data.search.business.filter(x => x.hours.is_open_now === true)
-        // console.log(yelpResult)
+        const data = await graphQLClient.request(findRestaurantsQuery, { location, alias });
+        console.log(data.hours.filter(x => x.open.length > 0));
         // let yelpResult = data.search.business.hours
         // let filtered = yelpResult.filter(open => open.hours.is_open_now == true)
-        // console.log(yelpResult)
 
-
-        let yelpResult2 = await data.search.business[Math.floor(Math.random() * data.search.business.length)]
+        let yelpResult2 = data.search.business[Math.floor(Math.random() * data.search.business.length)]
+        // console.log(yelpResult2.hours[0].open)
+        // console.log(yelpResult2.filter(x => x.hours[0].open === true))
         res.status(200).send(yelpResult2);
-        // res.status(200).json(data.search.business);
-        // for activity
     }
     catch (e) {
         res.status(404).send(e.message)
