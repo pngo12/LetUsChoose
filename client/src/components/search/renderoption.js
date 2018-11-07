@@ -1,6 +1,21 @@
 import React from 'react';
 import './random.css';
 
+const displayDays = ({ open, close }) => {
+    let days = ['Mon', 'Tu', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'];
+    let timeStrings = [];
+
+    for (let i = 0; i < 7; i++) {
+        if (open[i]) {
+            timeStrings.push(`${days[i]}: ${open[i]} to ${close[i]}`);
+        } else {
+            timeStrings.push(`${days[i]}: Closed`);
+        }
+    }
+    return timeStrings;
+}
+
+
 const RenderOption = props => {
     return (
         <div className="card is-pulled-left has-text-centered">
@@ -25,8 +40,9 @@ const RenderOption = props => {
                                         <td><p className="subtitle is-6 has-text-weight-bold">Address: {props.address}</p></td>
                                     </tr>
                                     <tr>
-                                        <td><p className="subtitle is-6 has-text-weight-bold">Open: {props.open}</p></td>
-                                        <td><p className="subtitle is-6 has-text-weight-bold">Close: {props.close}</p></td>
+                                        <td>
+                                            { displayDays(props).map((time, i) => <p key={i} className="subttitle is-6 has-text-weight-bold">{time}</p>) }
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><a onClick={props.redraw} className="button is-danger">Not happy? Redraw.</a></td>
