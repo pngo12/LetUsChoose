@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -7,8 +6,7 @@ const Footer = () => {
             <div className="content has-text-centered">
                 <div className="row">
                     <p className="content has-text-white">
-                    ©LUC is built by Kevin Moon, John Park, and Phillip Ngo. This is an open source project.
-            Please feel free to <a className="has-text-white" href="https://github.com/pngo12/youpick.git">contribute here</a>, or send us feedback <Link className="has-text-white" to='/feedback'>here.</Link>
+                    Want to help LUC make improvements? <a className="has-text-white" href="https://github.com/pngo12/youpick.git">Check out the repo here</a>
                     </p>
                 </div>
             </div>

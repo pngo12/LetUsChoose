@@ -18,8 +18,8 @@ class Navbar extends Component {
         <div className="container">
           <div className="navbar-brand">
             <a className="navbar-item">
-              <img src={logo} alt="Logo for the website"/>
-                </a>
+              <img src={logo} alt="Logo for the website" />
+            </a>
             <span className="navbar-burger burger" data-target="navbarMenuHeroA" onClick={this.toggleOpen}>
               <span></span>
               <span></span>

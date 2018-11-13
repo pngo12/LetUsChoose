@@ -2,7 +2,7 @@ import React from 'react';
 import './random.css';
 
 const displayDays = ({ open, close }) => {
-    let days = ['Mon', 'Tu', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'];
+    let days = ['Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'];
     let timeStrings = [];
 
     for (let i = 0; i < 7; i++) {
@@ -14,7 +14,6 @@ const displayDays = ({ open, close }) => {
     }
     return timeStrings;
 }
-
 
 const RenderOption = props => {
     return (
@@ -34,14 +33,13 @@ const RenderOption = props => {
                             <table className="table">
                                 <tbody>
                                     <tr>
-                                        <td><p className="subtitle is-6 has-text-weight-bold">Phone number: {props.phone}</p></td>
-                                    </tr>
-                                    <tr>
-                                        <td><p className="subtitle is-6 has-text-weight-bold">Address: {props.street}, {props.city} {props.state} {props.zip}</p></td>
+                                        <td><p className="subtitle is-6 has-text-weight-bold">Phone number: <p className="subtitle is-6">{props.phone}</p></p></td>
+                                        <td><p className="subtitle is-6 has-text-weight-bold">Address: <p className="subtitle is-6">{props.street}, {props.city} {props.state} {props.zip}</p></p></td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            { displayDays(props).map((time, i) => <p key={i} className="subttitle is-6 has-text-weight-bold">{time}</p>) }
+                                            <p className="subtitle is-6 has-text-weight-bold">Hours: </p>
+                                            {displayDays(props).map((time, i) => <p key={i} className="subttitle is-6">{time}</p>)}
                                         </td>
                                     </tr>
                                     <tr>
@@ -54,7 +52,7 @@ const RenderOption = props => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default RenderOption;

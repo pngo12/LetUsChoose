@@ -37,9 +37,13 @@ const findRestaurants = async (req, res) => {
             }
         });
         const data = await graphQLClient.request(findRestaurantsQuery, { location, alias });
-        // Randomize the results and send only one
-        let yelpResult2 = data.search.business[Math.floor(Math.random() * data.search.business.length)]
-        res.status(200).send(yelpResult2);
+        // Return only restaurants that have hours listed
+        let result = data.search.business.filter(x => x.hours[0].open.length !== undefined);
+
+        // Randomize the selection from result
+        let randomPick = result[Math.floor(Math.random()* result.length)];
+        
+        res.status(200).send(randomPick);
     }
     catch (e) {
         res.status(404).send(e.message);
