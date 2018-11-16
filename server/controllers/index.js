@@ -39,7 +39,6 @@ const findRestaurants = async (req, res) => {
         const data = await graphQLClient.request(findRestaurantsQuery, { location, alias });
         // Return only restaurants that have hours listed
         let result = data.search.business.filter(x => x.hours[0].open.length !== undefined);
-
         // Randomize the selection from result
         let randomPick = result[Math.floor(Math.random()* result.length)];
         
