@@ -33,13 +33,23 @@ const RenderOption = props => {
                             <table className="table">
                                 <tbody>
                                     <tr>
-                                        <td><p className="subtitle is-6 has-text-weight-bold">Phone number: <p className="subtitle is-6">{props.phone}</p></p></td>
-                                        <td><p className="subtitle is-6 has-text-weight-bold">Address: <p className="subtitle is-6">{props.street}, {props.city} {props.state} {props.zip}</p></p></td>
+                                        <td>
+                                            <p className="subtitle is-6 has-text-weight-bold">Phone number: </p>
+                                            <p className="subtitle is-6">{props.phone}</p>
+                                        </td>
+                                        <td>
+                                            <p className="subtitle is-6 has-text-weight-bold">Address: </p>
+                                            <p className="subtitle is-6">{props.street}, {props.city} {props.state} {props.zip}</p>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <p className="subtitle is-6 has-text-weight-bold">Hours: </p>
                                             {displayDays(props).map((time, i) => <p key={i} className="subttitle is-6">{time}</p>)}
+                                        </td>
+                                        <td>
+                                            <p className="subtitle is-6 has-text-weight-bold">Website: </p>
+                                            <p><a href={props.link}>{props.name}</a></p>
                                         </td>
                                     </tr>
                                     <tr>
