@@ -6,4 +6,4 @@ Built off the Yelp Fusion API, LUC takes in what type of food you're craving or 
 
 ### Check out a demo below:
 
-![Alt Text](https://media.giphy.com/media/cJjQjIALNHQRiaXnfQ/giphy.gif)
+![Alt Text](https://media.giphy.com/media/9P56DsEfM9mqmcluJF/giphy.gif)
