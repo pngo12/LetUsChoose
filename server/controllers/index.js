@@ -33,7 +33,7 @@ const findRestaurants = async (req, res) => {
         const endpoint = "https://api.yelp.com/v3/graphql";
         const graphQLClient = new GraphQLClient(endpoint, {
             headers: {
-                'Authorization': `Bearer ${key}`
+                'Authorization': `Bearer ${process.env.KEY}`
             }
         });
         const data = await graphQLClient.request(findRestaurantsQuery, { location, alias });
