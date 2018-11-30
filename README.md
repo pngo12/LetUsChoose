@@ -1,4 +1,4 @@
-# What's this repo do?!
+# What's this thing do?!
 
 **LUC** (Let Us Choose) is a random food/activity generator for the picky person (or group).
 
