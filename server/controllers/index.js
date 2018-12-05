@@ -1,4 +1,4 @@
-const key = require('../key');
+require('dotenv').load();
 const { GraphQLClient } = require('graphql-request');
 
 const findRestaurants = async (req, res) => {
