@@ -16,7 +16,9 @@ class Search extends Component {
     requestData = async e => {
         e.preventDefault();
         try {
-            const receiveRestaurant = await axios.get(`http://localhost:4000/request/${this.state.alias}/${this.state.location}`, { crossdomain: true });
+            console.log("BEFORE AXIOS")
+            const receiveRestaurant = await axios.get(`http://localhost:4000/request/${this.state.alias}/${this.state.location}`);
+            console.log(receiveRestaurant)
             if (receiveRestaurant !== null || undefined) {
                 this.setState({
                     data: receiveRestaurant.data,

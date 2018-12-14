@@ -18,7 +18,6 @@ const HomeBody = () => {
                 <NavLink className="button is-large is-info is-hovered has-text-white" to='/search'>Get Started</NavLink>
             </section>
         </section>
-
     );
 }
 
