@@ -16,9 +16,7 @@ class Search extends Component {
     requestData = async e => {
         e.preventDefault();
         try {
-            console.log("BEFORE AXIOS")
             const receiveRestaurant = await axios.get(`process.env.REACT_APP_API/${this.state.alias}/${this.state.location}`);
-            console.log(receiveRestaurant)
             if (receiveRestaurant !== null || undefined) {
                 this.setState({
                     data: receiveRestaurant.data,
